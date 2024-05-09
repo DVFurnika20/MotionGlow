@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "IZELk5WSqVaQYg4b7v8i8V9rfPMaJk/Y4a/hKaU5vhHkcoIl9kuXFuA2aX3PsqqZ9Sjaq+jaGcGXJHa7f4jirQ==",
+  "success": true,
+  "projectFilePath": "/home/goofy/RiderProjects/arduino-projects-11a-KBLambov20/MotionGlow/MotionGlow.BLL/MotionGlow.BLL.csproj",
+  "expectedPackageFiles": [
+    "/home/goofy/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.4/microsoft.aspnetcore.app.ref.8.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
