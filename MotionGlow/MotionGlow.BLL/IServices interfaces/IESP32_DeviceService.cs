@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace MotionGlow.BLL.IServices
 {
-    public interface IESP32_DeviceRepository
+    public interface IESP32_DeviceService
     {
         Task<IEnumerable<ESP32_Device>> GetAllDevicesAsync();
         Task<ESP32_Device> GetDeviceByIdAsync(int id);

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace MotionGlow.BLL.IServices
 {
-    public interface ISoundSensorRepository
+    public interface ISoundSensorService
     {
         Task<IEnumerable<SoundSensor>> GetAllSoundSensorsAsync();
         Task<SoundSensor> GetSoundSensorByIdAsync(int id);

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace MotionGlow.BLL.IServices
 {
-    public interface ISensorActivityLogRepository
+    public interface ISensorActivityLogService
     {
         Task<IEnumerable<SensorActivityLog>> GetAllSensorActivityLogsAsync();
         Task<SensorActivityLog> GetSensorActivityLogByIdAsync(int id);

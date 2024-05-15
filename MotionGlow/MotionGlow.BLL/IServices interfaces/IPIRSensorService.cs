@@ -2,9 +2,9 @@
 using MotionGlow.DAL.Models;
 using System.Threading.Tasks;
 
-namespace MMotionGlow.BLL.IServices
+namespace MotionGlow.BLL.IServices
 {
-    public interface IPIRSensorRepository
+    public interface IPIRSensorService
     {
         Task<IEnumerable<PIRSensor>> GetAllPIRSensorsAsync();
         Task<PIRSensor> GetPIRSensorByIdAsync(int id);
