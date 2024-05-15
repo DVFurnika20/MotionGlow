@@ -1,35 +1,75 @@
-namespace MotionGlow;
+using Microsoft.EntityFrameworkCore;
+using MotionGlow.DAL.Data;
 
-public class Program
+namespace MotionGlow
 {
-    public static void Main(string[] args)
+    public class Program
     {
-        var builder = WebApplication.CreateBuilder(args);
-
-        // Add services to the container.
-        builder.Services.AddControllersWithViews();
-
-        var app = builder.Build();
-
-        // Configure the HTTP request pipeline.
-        if (!app.Environment.IsDevelopment())
+        public static void Main(string[] args)
         {
-            app.UseExceptionHandler("/Home/Error");
-            // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-            app.UseHsts();
+            CreateHostBuilder(args).Build().Run();
         }
 
-        app.UseHttpsRedirection();
-        app.UseStaticFiles();
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
+    }
 
-        app.UseRouting();
+    public class Startup
+    {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
 
-        app.UseAuthorization();
+        public IConfiguration Configuration { get; }
 
-        app.MapControllerRoute(
-            name: "default",
-            pattern: "{controller=Home}/{action=Index}/{id?}");
+        // This method gets called by the runtime. Use this method to add services to the container.
+        public void ConfigureServices(IServiceCollection services)
+        {
+            // Configure Entity Framework Core to use SQL Server
+            services.AddDbContext<MotionGlowDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-        app.Run();
+            // Register services
+            services.AddControllersWithViews();
+
+            // Add other services (like your business logic services)
+            // services.AddScoped<IESP32_DeviceService, ESP32_DeviceService>();
+            // services.AddScoped<IPIRSensorService, PIRSensorService>();
+            // services.AddScoped<ISensorActivityLogService, SensorActivityLogService>();
+            // services.AddScoped<ISoundSensorService, SoundSensorService>();
+        }
+
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+                app.UseHsts();
+            }
+
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
+
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
+            });
+        }
     }
 }

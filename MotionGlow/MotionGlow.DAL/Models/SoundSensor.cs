@@ -1,22 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
-namespace MotionGlow.DAL.Models;
-
-public partial class SoundSensor
+namespace MotionGlow.DAL.Models
 {
-    [Key]
-    public int SensorID { get; set; }
+    public partial class SoundSensor
+    {
+        private int _sensorId;
+        private int? _deviceId;
 
-    public int? DeviceID { get; set; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int SensorID
+        {
+            get { return _sensorId; }
+            set { _sensorId = value; }
+        }
 
-    [ForeignKey("DeviceID")]
-    [InverseProperty("SoundSensor")]
-    public virtual ESP32_Device? Device { get; set; }
+        public int? DeviceID
+        {
+            get { return _deviceId; }
+            set { _deviceId = value; }
+        }
 
-    [InverseProperty("SoundSensor")]
-    public virtual ICollection<SensorActivityLog> SensorActivityLog { get; set; } = new List<SensorActivityLog>();
+        [ForeignKey("DeviceID")]
+        [InverseProperty("SoundSensor")]
+        public virtual ESP32_Device Device { get; set; }
+
+        [InverseProperty("SoundSensor")]
+        public virtual ICollection<SensorActivityLog> SensorActivityLog { get; set; } = new List<SensorActivityLog>();
+    }
 }

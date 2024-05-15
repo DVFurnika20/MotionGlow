@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MotionGlow.BLL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8cc81a6b7033045de88c73ee913ec46c6f30e2c8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c596f5b9c11b814e89bbc0defe4e035484a3b148")]
 [assembly: System.Reflection.AssemblyProductAttribute("MotionGlow.BLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MotionGlow.BLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
