@@ -1,0 +1,15 @@
+﻿@model MotionGlow.Models.SensorActivityLogViewModel
+
+<h2>Activity Log Details</h2>
+
+<p>Timestamp: @Model.Timestamp</p>
+<p>Sound Level: @Model.SoundLevel</p>
+<p>Distance: @Model.Distance</p>
+
+<h3>Device Details</h3>
+<p>Device Name: @Model.Device.DeviceName</p>
+<p>Device Type: @Model.Device.DeviceType</p>
+<p>Location: @Model.Device.Location</p>
+<p>Description: @Model.Device.Description</p>
+
+<!-- Add similar sections for PIRSensor and SoundSensor -->

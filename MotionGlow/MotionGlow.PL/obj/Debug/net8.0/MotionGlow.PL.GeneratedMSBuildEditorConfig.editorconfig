@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Famouscave\RiderProjects\arduino-projects-11a-KBLambov20\MotionGlow\MotionGlow.PL
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Famouscave/RiderProjects/arduino-projects-11a-KBLambov20/MotionGlow/MotionGlow.PL/Views/ESP32_Device/ESP32_DeviceDetailsView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRVNQMzJfRGV2aWNlXEVTUDMyX0RldmljZURldGFpbHNWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Famouscave/RiderProjects/arduino-projects-11a-KBLambov20/MotionGlow/MotionGlow.PL/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -26,12 +30,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Famouscave/RiderProjects/arduino-projects-11a-KBLambov20/MotionGlow/MotionGlow.PL/Views/PIRSensor/PIRSensorDetailsView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUElSU2Vuc29yXFBJUlNlbnNvckRldGFpbHNWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Famouscave/RiderProjects/arduino-projects-11a-KBLambov20/MotionGlow/MotionGlow.PL/Views/SensorActivityLog/SensorActivityLogDetailsView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Vuc29yQWN0aXZpdHlMb2dcU2Vuc29yQWN0aXZpdHlMb2dEZXRhaWxzVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Famouscave/RiderProjects/arduino-projects-11a-KBLambov20/MotionGlow/MotionGlow.PL/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Famouscave/RiderProjects/arduino-projects-11a-KBLambov20/MotionGlow/MotionGlow.PL/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Famouscave/RiderProjects/arduino-projects-11a-KBLambov20/MotionGlow/MotionGlow.PL/Views/SoundSensor/SoundSensorDetailsView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU291bmRTZW5zb3JcU291bmRTZW5zb3JEZXRhaWxzVmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Famouscave/RiderProjects/arduino-projects-11a-KBLambov20/MotionGlow/MotionGlow.PL/Views/_ViewImports.cshtml]

@@ -2,41 +2,50 @@
 using System.Threading.Tasks;
 using MotionGlow.DAL.Models;
 using MotionGlow.BLL.IServices;
+using MotionGlow.DAL.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace MotionGlow.BLL.Services
 {
     public class PIRSensorService : IPIRSensorService
     {
-        private readonly IPIRSensorService _pirSensorRepository;
+        private readonly MotionGlowDbContext _dbContext;
 
-        public PIRSensorService(IPIRSensorService pirSensorRepository)
+        public PIRSensorService(MotionGlowDbContext dbContext)
         {
-            _pirSensorRepository = pirSensorRepository;
+            _dbContext = dbContext;
         }
 
         public async Task<IEnumerable<PIRSensor>> GetAllPIRSensorsAsync()
         {
-            return await _pirSensorRepository.GetAllPIRSensorsAsync();
+            return await _dbContext.PIRSensor.ToListAsync();
         }
 
         public async Task<PIRSensor> GetPIRSensorByIdAsync(int id)
         {
-            return await _pirSensorRepository.GetPIRSensorByIdAsync(id);
+            return await _dbContext.PIRSensor.FindAsync(id);
         }
 
         public async Task AddPIRSensorAsync(PIRSensor pirSensor)
         {
-            await _pirSensorRepository.AddPIRSensorAsync(pirSensor);
+            _dbContext.PIRSensor.Add(pirSensor);
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task UpdatePIRSensorAsync(PIRSensor pirSensor)
         {
-            await _pirSensorRepository.UpdatePIRSensorAsync(pirSensor);
+            _dbContext.PIRSensor.Update(pirSensor);
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task DeletePIRSensorAsync(int id)
         {
-            await _pirSensorRepository.DeletePIRSensorAsync(id);
+            var pirSensor = await _dbContext.PIRSensor.FindAsync(id);
+            if (pirSensor != null)
+            {
+                _dbContext.PIRSensor.Remove(pirSensor);
+                await _dbContext.SaveChangesAsync();
+            }
         }
     }
 }

@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using MotionGlow.BLL.IServices;
+using MotionGlow.BLL.Services;
 using MotionGlow.DAL.Data;
 
 namespace MotionGlow
@@ -38,10 +40,10 @@ namespace MotionGlow
             services.AddControllersWithViews();
 
             // Add other services (like your business logic services)
-            // services.AddScoped<IESP32_DeviceService, ESP32_DeviceService>();
-            // services.AddScoped<IPIRSensorService, PIRSensorService>();
-            // services.AddScoped<ISensorActivityLogService, SensorActivityLogService>();
-            // services.AddScoped<ISoundSensorService, SoundSensorService>();
+            services.AddScoped<IESP32_DeviceService, ESP32_DeviceService>();
+            services.AddScoped<IPIRSensorService, PIRSensorService>();
+            services.AddScoped<ISensorActivityLogService, SensorActivityLogService>();
+            services.AddScoped<ISoundSensorService, SoundSensorService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

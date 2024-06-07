@@ -2,41 +2,50 @@
 using System.Threading.Tasks;
 using MotionGlow.DAL.Models;
 using MotionGlow.BLL.IServices;
+using MotionGlow.DAL.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace MotionGlow.BLL.Services
 {
     public class SensorActivityLogService : ISensorActivityLogService
     {
-        private readonly ISensorActivityLogService _sensorActivityLogRepository;
+        private readonly MotionGlowDbContext _dbContext;
 
-        public SensorActivityLogService(ISensorActivityLogService sensorActivityLogRepository)
+        public SensorActivityLogService(MotionGlowDbContext dbContext)
         {
-            _sensorActivityLogRepository = sensorActivityLogRepository;
+            _dbContext = dbContext;
         }
 
         public async Task<IEnumerable<SensorActivityLog>> GetAllSensorActivityLogsAsync()
         {
-            return await _sensorActivityLogRepository.GetAllSensorActivityLogsAsync();
+            return await _dbContext.SensorActivityLog.ToListAsync();
         }
 
         public async Task<SensorActivityLog> GetSensorActivityLogByIdAsync(int id)
         {
-            return await _sensorActivityLogRepository.GetSensorActivityLogByIdAsync(id);
+            return await _dbContext.SensorActivityLog.FindAsync(id);
         }
 
         public async Task AddSensorActivityLogAsync(SensorActivityLog sensorActivityLog)
         {
-            await _sensorActivityLogRepository.AddSensorActivityLogAsync(sensorActivityLog);
+            _dbContext.SensorActivityLog.Add(sensorActivityLog);
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task UpdateSensorActivityLogAsync(SensorActivityLog sensorActivityLog)
         {
-            await _sensorActivityLogRepository.UpdateSensorActivityLogAsync(sensorActivityLog);
+            _dbContext.SensorActivityLog.Update(sensorActivityLog);
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task DeleteSensorActivityLogAsync(int id)
         {
-            await _sensorActivityLogRepository.DeleteSensorActivityLogAsync(id);
+            var sensorActivityLog = await _dbContext.SensorActivityLog.FindAsync(id);
+            if (sensorActivityLog != null)
+            {
+                _dbContext.SensorActivityLog.Remove(sensorActivityLog);
+                await _dbContext.SaveChangesAsync();
+            }
         }
     }
 }
