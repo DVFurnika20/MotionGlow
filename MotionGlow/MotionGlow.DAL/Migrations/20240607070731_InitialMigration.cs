@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace MotionGlow.DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class Encapsulationenforce : Migration
+    public partial class InitialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -15,29 +15,31 @@ namespace MotionGlow.DAL.Migrations
                 name: "ESP32_Device",
                 columns: table => new
                 {
-                    DeviceID = table.Column<int>(type: "int", nullable: false),
+                    DeviceID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     DeviceName = table.Column<string>(type: "varchar(100)", unicode: false, maxLength: 100, nullable: false),
                     DeviceType = table.Column<string>(type: "varchar(50)", unicode: false, maxLength: 50, nullable: false),
                     Location = table.Column<string>(type: "varchar(100)", unicode: false, maxLength: 100, nullable: false),
-                    Description = table.Column<string>(type: "text", nullable: false)
+                    Description = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__ESP32_De__49E123317F6364D6", x => x.DeviceID);
+                    table.PrimaryKey("PK__ESP32_De__49E1233103832F04", x => x.DeviceID);
                 });
 
             migrationBuilder.CreateTable(
                 name: "PIRSensor",
                 columns: table => new
                 {
-                    SensorID = table.Column<int>(type: "int", nullable: false),
-                    DeviceID = table.Column<int>(type: "int", nullable: true)
+                    SensorID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    DeviceID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__PIRSenso__D809841AE0FAE2E3", x => x.SensorID);
+                    table.PrimaryKey("PK__PIRSenso__D809841A74EE4F65", x => x.SensorID);
                     table.ForeignKey(
-                        name: "FK__PIRSensor__Devic__4E88ABD4",
+                        name: "FK__PIRSensor__Devic__74AE54BC",
                         column: x => x.DeviceID,
                         principalTable: "ESP32_Device",
                         principalColumn: "DeviceID");
@@ -47,14 +49,15 @@ namespace MotionGlow.DAL.Migrations
                 name: "SoundSensor",
                 columns: table => new
                 {
-                    SensorID = table.Column<int>(type: "int", nullable: false),
-                    DeviceID = table.Column<int>(type: "int", nullable: true)
+                    SensorID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    DeviceID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__SoundSen__D809841A97688CF6", x => x.SensorID);
+                    table.PrimaryKey("PK__SoundSen__D809841A09F0AE66", x => x.SensorID);
                     table.ForeignKey(
-                        name: "FK__SoundSens__Devic__4BAC3F29",
+                        name: "FK__SoundSens__Devic__71D1E811",
                         column: x => x.DeviceID,
                         principalTable: "ESP32_Device",
                         principalColumn: "DeviceID");
@@ -64,33 +67,49 @@ namespace MotionGlow.DAL.Migrations
                 name: "SensorActivityLog",
                 columns: table => new
                 {
-                    LogID = table.Column<int>(type: "int", nullable: false),
-                    DeviceID = table.Column<int>(type: "int", nullable: true),
-                    SoundSensorID = table.Column<int>(type: "int", nullable: true),
-                    PIRSensorID = table.Column<int>(type: "int", nullable: true),
-                    Timestamp = table.Column<DateTime>(type: "datetime", nullable: true),
+                    LogID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    DeviceID = table.Column<int>(type: "int", nullable: false),
+                    SoundSensorID = table.Column<int>(type: "int", nullable: false),
+                    PIRSensorID = table.Column<int>(type: "int", nullable: false),
+                    Timestamp = table.Column<DateTime>(type: "datetime", nullable: false),
                     SoundLevel = table.Column<int>(type: "int", nullable: true),
                     Distance = table.Column<decimal>(type: "decimal(5,2)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__SensorAc__5E5499A8770AC7AC", x => x.LogID);
+                    table.PrimaryKey("PK__SensorAc__5E5499A86D16828D", x => x.LogID);
                     table.ForeignKey(
-                        name: "FK__SensorAct__Devic__5165187F",
+                        name: "FK__SensorAct__Devic__778AC167",
                         column: x => x.DeviceID,
                         principalTable: "ESP32_Device",
                         principalColumn: "DeviceID");
                     table.ForeignKey(
-                        name: "FK__SensorAct__PIRSe__534D60F1",
+                        name: "FK__SensorAct__PIRSe__797309D9",
                         column: x => x.PIRSensorID,
                         principalTable: "PIRSensor",
                         principalColumn: "SensorID");
                     table.ForeignKey(
-                        name: "FK__SensorAct__Sound__52593CB8",
+                        name: "FK__SensorAct__Sound__787EE5A0",
                         column: x => x.SoundSensorID,
                         principalTable: "SoundSensor",
                         principalColumn: "SensorID");
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "idx_DeviceName",
+                table: "ESP32_Device",
+                column: "DeviceName");
+
+            migrationBuilder.CreateIndex(
+                name: "idx_DeviceType",
+                table: "ESP32_Device",
+                column: "DeviceType");
+
+            migrationBuilder.CreateIndex(
+                name: "idx_Location",
+                table: "ESP32_Device",
+                column: "Location");
 
             migrationBuilder.CreateIndex(
                 name: "IX_PIRSensor_DeviceID",

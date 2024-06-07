@@ -32,7 +32,7 @@ namespace MotionGlow
         {
             // Configure Entity Framework Core to use SQL Server
             services.AddDbContext<MotionGlowDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+               options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             // Register services
             services.AddControllersWithViews();

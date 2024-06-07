@@ -12,8 +12,8 @@ using MotionGlow.DAL.Data;
 namespace MotionGlow.DAL.Migrations
 {
     [DbContext(typeof(MotionGlowDbContext))]
-    [Migration("20240515065559_Encapsulation enforce")]
-    partial class Encapsulationenforce
+    [Migration("20240607070731_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,10 +28,12 @@ namespace MotionGlow.DAL.Migrations
             modelBuilder.Entity("MotionGlow.DAL.Models.ESP32_Device", b =>
                 {
                     b.Property<int>("DeviceID")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DeviceID"));
+
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("DeviceName")
@@ -53,7 +55,13 @@ namespace MotionGlow.DAL.Migrations
                         .HasColumnType("varchar(100)");
 
                     b.HasKey("DeviceID")
-                        .HasName("PK__ESP32_De__49E123317F6364D6");
+                        .HasName("PK__ESP32_De__49E1233103832F04");
+
+                    b.HasIndex(new[] { "DeviceName" }, "idx_DeviceName");
+
+                    b.HasIndex(new[] { "DeviceType" }, "idx_DeviceType");
+
+                    b.HasIndex(new[] { "Location" }, "idx_Location");
 
                     b.ToTable("ESP32_Device");
                 });
@@ -61,13 +69,16 @@ namespace MotionGlow.DAL.Migrations
             modelBuilder.Entity("MotionGlow.DAL.Models.PIRSensor", b =>
                 {
                     b.Property<int>("SensorID")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int?>("DeviceID")
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SensorID"));
+
+                    b.Property<int>("DeviceID")
                         .HasColumnType("int");
 
                     b.HasKey("SensorID")
-                        .HasName("PK__PIRSenso__D809841AE0FAE2E3");
+                        .HasName("PK__PIRSenso__D809841A74EE4F65");
 
                     b.HasIndex("DeviceID");
 
@@ -77,28 +88,31 @@ namespace MotionGlow.DAL.Migrations
             modelBuilder.Entity("MotionGlow.DAL.Models.SensorActivityLog", b =>
                 {
                     b.Property<int>("LogID")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int?>("DeviceID")
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("LogID"));
+
+                    b.Property<int>("DeviceID")
                         .HasColumnType("int");
 
                     b.Property<decimal?>("Distance")
                         .HasColumnType("decimal(5, 2)");
 
-                    b.Property<int?>("PIRSensorID")
+                    b.Property<int>("PIRSensorID")
                         .HasColumnType("int");
 
                     b.Property<int?>("SoundLevel")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SoundSensorID")
+                    b.Property<int>("SoundSensorID")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("Timestamp")
+                    b.Property<DateTime>("Timestamp")
                         .HasColumnType("datetime");
 
                     b.HasKey("LogID")
-                        .HasName("PK__SensorAc__5E5499A8770AC7AC");
+                        .HasName("PK__SensorAc__5E5499A86D16828D");
 
                     b.HasIndex("DeviceID");
 
@@ -112,13 +126,16 @@ namespace MotionGlow.DAL.Migrations
             modelBuilder.Entity("MotionGlow.DAL.Models.SoundSensor", b =>
                 {
                     b.Property<int>("SensorID")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int?>("DeviceID")
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SensorID"));
+
+                    b.Property<int>("DeviceID")
                         .HasColumnType("int");
 
                     b.HasKey("SensorID")
-                        .HasName("PK__SoundSen__D809841A97688CF6");
+                        .HasName("PK__SoundSen__D809841A09F0AE66");
 
                     b.HasIndex("DeviceID");
 
@@ -130,7 +147,8 @@ namespace MotionGlow.DAL.Migrations
                     b.HasOne("MotionGlow.DAL.Models.ESP32_Device", "Device")
                         .WithMany("PIRSensor")
                         .HasForeignKey("DeviceID")
-                        .HasConstraintName("FK__PIRSensor__Devic__4E88ABD4");
+                        .IsRequired()
+                        .HasConstraintName("FK__PIRSensor__Devic__74AE54BC");
 
                     b.Navigation("Device");
                 });
@@ -140,17 +158,20 @@ namespace MotionGlow.DAL.Migrations
                     b.HasOne("MotionGlow.DAL.Models.ESP32_Device", "Device")
                         .WithMany("SensorActivityLog")
                         .HasForeignKey("DeviceID")
-                        .HasConstraintName("FK__SensorAct__Devic__5165187F");
+                        .IsRequired()
+                        .HasConstraintName("FK__SensorAct__Devic__778AC167");
 
                     b.HasOne("MotionGlow.DAL.Models.PIRSensor", "PIRSensor")
                         .WithMany("SensorActivityLog")
                         .HasForeignKey("PIRSensorID")
-                        .HasConstraintName("FK__SensorAct__PIRSe__534D60F1");
+                        .IsRequired()
+                        .HasConstraintName("FK__SensorAct__PIRSe__797309D9");
 
                     b.HasOne("MotionGlow.DAL.Models.SoundSensor", "SoundSensor")
                         .WithMany("SensorActivityLog")
                         .HasForeignKey("SoundSensorID")
-                        .HasConstraintName("FK__SensorAct__Sound__52593CB8");
+                        .IsRequired()
+                        .HasConstraintName("FK__SensorAct__Sound__787EE5A0");
 
                     b.Navigation("Device");
 
@@ -164,7 +185,8 @@ namespace MotionGlow.DAL.Migrations
                     b.HasOne("MotionGlow.DAL.Models.ESP32_Device", "Device")
                         .WithMany("SoundSensor")
                         .HasForeignKey("DeviceID")
-                        .HasConstraintName("FK__SoundSens__Devic__4BAC3F29");
+                        .IsRequired()
+                        .HasConstraintName("FK__SoundSens__Devic__71D1E811");
 
                     b.Navigation("Device");
                 });
