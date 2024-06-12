@@ -39,7 +39,19 @@ CREATE TABLE SensorActivityLog (
     FOREIGN KEY (PIRSensorID) REFERENCES PIRSensor(SensorID)
 );
 
+-- Create the User table
+CREATE TABLE [Users] (
+    UsersID INT PRIMARY KEY IDENTITY(1,1),
+    FirstName VARCHAR(100) NOT NULL,
+    LastName VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) NOT NULL,
+    [Password] VARCHAR(100) NOT NULL,
+    IsAdmin BIT NOT NULL
+);
+
+
 -- Add indexes
 CREATE INDEX idx_DeviceName ON ESP32_Device(DeviceName);
 CREATE INDEX idx_DeviceType ON ESP32_Device(DeviceType);
 CREATE INDEX idx_Location ON ESP32_Device(Location);
+CREATE INDEX idx_Email ON Users(Email);

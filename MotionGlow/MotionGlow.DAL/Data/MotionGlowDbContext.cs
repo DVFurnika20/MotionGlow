@@ -19,6 +19,8 @@ public partial class MotionGlowDbContext : DbContext
     public virtual DbSet<SensorActivityLog> SensorActivityLog { get; set; }
 
     public virtual DbSet<SoundSensor> SoundSensor { get; set; }
+    
+    public virtual DbSet<User> Users { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -60,6 +62,21 @@ public partial class MotionGlowDbContext : DbContext
             entity.HasOne(d => d.Device).WithMany(p => p.SoundSensor)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__SoundSens__Devic__71D1E811");
+        });
+        
+        modelBuilder.Entity<User>(entity =>
+        {
+            entity.HasKey(e => e.UserID).HasName("PK__Users__1788CC4C4A3A3C3D");
+
+            entity.HasIndex(e => e.Email, "idx_Email").IsUnique();
+
+            entity.Property(e => e.FirstName).IsUnicode(false).HasMaxLength(100).IsRequired();
+
+            entity.Property(e => e.LastName).IsUnicode(false).HasMaxLength(100).IsRequired();
+
+            entity.Property(e => e.Email).IsUnicode(false).HasMaxLength(100).IsRequired();
+
+            entity.Property(e => e.Password).IsUnicode(false).HasMaxLength(100).IsRequired();
         });
 
         OnModelCreatingPartial(modelBuilder);
