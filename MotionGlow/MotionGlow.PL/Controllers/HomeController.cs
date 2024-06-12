@@ -34,7 +34,7 @@ namespace MotionGlow.Controllers
             var device = await _deviceService.GetDeviceByIdAsync(id);
             if (device == null)
             {
-                return NotFound();
+                return View("Views/ESP32_DeviceDetails/ESP32_DeviceDetails.cshtml");
             }
 
             var viewModel = new ESP32_DeviceViewModel
@@ -44,7 +44,7 @@ namespace MotionGlow.Controllers
                 Location = device.Location,
                 Description = device.Description
             };
-            return View(viewModel);
+            return NotFound();
         }
 
         public async Task<IActionResult> PIRSensorDetails(int id)
@@ -52,7 +52,7 @@ namespace MotionGlow.Controllers
             var pirSensor = await _pirSensorService.GetPIRSensorByIdAsync(id);
             if (pirSensor == null)
             {
-                return NotFound();
+                return View("Views/PIRSensorDetails/PIRSensorDetails.cshtml");
             }
 
             var viewModel = new PIRSensorViewModel
@@ -65,7 +65,7 @@ namespace MotionGlow.Controllers
                     Description = pirSensor.Device.Description
                 }
             };
-            return View(viewModel);
+            return NotFound();
         }
 
         public async Task<IActionResult> SensorActivityLogDetails(int id)
@@ -73,7 +73,7 @@ namespace MotionGlow.Controllers
             var activityLog = await _activityLogService.GetSensorActivityLogByIdAsync(id);
             if (activityLog == null)
             {
-                return NotFound();
+                return View("Views/SensorActivityLogDetails/SensorActivityLogDetails.cshtml");
             }
 
             var viewModel = new SensorActivityLogViewModel
@@ -109,7 +109,7 @@ namespace MotionGlow.Controllers
                     }
                 }
             };
-            return View(viewModel);
+            return NotFound();
         }
 
         public async Task<IActionResult> SoundSensorDetails(int id)
@@ -117,7 +117,7 @@ namespace MotionGlow.Controllers
             var soundSensor = await _soundSensorService.GetSoundSensorByIdAsync(id);
             if (soundSensor == null)
             {
-                return NotFound();
+                return View("Views/SoundSensorDetails/SoundSensorDetails.cshtml");
             }
 
             var viewModel = new SoundSensorViewModel
@@ -130,7 +130,7 @@ namespace MotionGlow.Controllers
                     Description = soundSensor.Device.Description
                 }
             };
-            return View(viewModel);
+            return NotFound();
         }
 
         public IActionResult Index()

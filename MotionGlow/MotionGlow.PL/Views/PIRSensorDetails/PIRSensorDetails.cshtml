@@ -1,7 +1,14 @@
 ﻿@model MotionGlow.Models.PIRSensorViewModel
 
+@if (Model == null || Model.Device == null)
+{
+<p>No data</p>
+}
+else
+{
 <h2>@Model.Device.DeviceName Details</h2>
 
 <p>Device Type: @Model.Device.DeviceType</p>
 <p>Location: @Model.Device.Location</p>
 <p>Description: @Model.Device.Description</p>
+}

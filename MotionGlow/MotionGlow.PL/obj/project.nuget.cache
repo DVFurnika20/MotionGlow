@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BBfuZoMFGAJALHgUgv1AlHXhJLcMSYdWDbCPx/tfJJwG9O3KLFy7hRKyEq3KktwwfAtBda/oelgka4ukWlKbqw==",
+  "dgSpecHash": "DRPO+kmAD5asClOI17mzi2Ca9c4EoIdqIodZHv9BFVULu8qCtPo6VJwc4pyet5SQZdPTxxJksmWUu1GosjIT9A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Famouscave\\RiderProjects\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\MotionGlow.PL.csproj",
+  "projectFilePath": "C:\\Users\\Famouscave\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\MotionGlow.PL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Famouscave\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Famouscave\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

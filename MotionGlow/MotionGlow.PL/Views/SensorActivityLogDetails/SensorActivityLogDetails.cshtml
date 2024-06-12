@@ -1,5 +1,11 @@
 ﻿@model MotionGlow.Models.SensorActivityLogViewModel
 
+@if (Model == null || Model.Device == null || Model.PIRSensor == null || Model.SoundSensor == null)
+{
+<p>No data</p>
+}
+else
+{
 <h2>Activity Log Details</h2>
 
 <p>Timestamp: @Model.Timestamp</p>
@@ -13,3 +19,4 @@
 <p>Description: @Model.Device.Description</p>
 
 <!-- Add similar sections for PIRSensor and SoundSensor -->
+}
