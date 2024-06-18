@@ -1,22 +1,23 @@
-﻿@model MotionGlow.Models.SensorActivityLogViewModel
+﻿@model List<MotionGlow.Models.SensorActivityLogViewModel>
 
-@if (Model == null || Model.Device == null || Model.PIRSensor == null || Model.SoundSensor == null)
+@foreach (var activityLog in Model)
 {
-<p>No data</p>
-}
-else
-{
-<h2>Activity Log Details</h2>
+    <h2>Activity Log Details</h2>
 
-<p>Timestamp: @Model.Timestamp</p>
-<p>Sound Level: @Model.SoundLevel</p>
-<p>Distance: @Model.Distance</p>
+    <p>Timestamp: @activityLog.Timestamp</p>
+    <p>Sound Level: @activityLog.SoundLevel</p>
+    <p>Distance: @activityLog.Distance</p>
 
-<h3>Device Details</h3>
-<p>Device Name: @Model.Device.DeviceName</p>
-<p>Device Type: @Model.Device.DeviceType</p>
-<p>Location: @Model.Device.Location</p>
-<p>Description: @Model.Device.Description</p>
-
-<!-- Add similar sections for PIRSensor and SoundSensor -->
+    <h3>Device Details</h3>
+    @if (activityLog.Device != null)
+    {
+        <p>Device Name: @activityLog.Device.DeviceName</p>
+        <p>Device Type: @activityLog.Device.DeviceType</p>
+        <p>Location: @activityLog.Device.Location</p>
+        <p>Description: @activityLog.Device.Description</p>
+    }
+    else
+    {
+        <p>No device information available for this activity log.</p>
+    }
 }

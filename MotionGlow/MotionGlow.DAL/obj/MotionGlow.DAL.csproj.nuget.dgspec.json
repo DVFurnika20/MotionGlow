@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Famouscave\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.DAL\\MotionGlow.DAL.csproj": {}
+    "C:\\Users\\Famouscave\\RiderProjects\\arduino-projects-11A\\MotionGlow\\MotionGlow.DAL\\MotionGlow.DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Famouscave\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.DAL\\MotionGlow.DAL.csproj": {
+    "C:\\Users\\Famouscave\\RiderProjects\\arduino-projects-11A\\MotionGlow\\MotionGlow.DAL\\MotionGlow.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Famouscave\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.DAL\\MotionGlow.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Famouscave\\RiderProjects\\arduino-projects-11A\\MotionGlow\\MotionGlow.DAL\\MotionGlow.DAL.csproj",
         "projectName": "MotionGlow.DAL",
-        "projectPath": "C:\\Users\\Famouscave\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.DAL\\MotionGlow.DAL.csproj",
+        "projectPath": "C:\\Users\\Famouscave\\RiderProjects\\arduino-projects-11A\\MotionGlow\\MotionGlow.DAL\\MotionGlow.DAL.csproj",
         "packagesPath": "C:\\Users\\Famouscave\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Famouscave\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.DAL\\obj\\",
+        "outputPath": "C:\\Users\\Famouscave\\RiderProjects\\arduino-projects-11A\\MotionGlow\\MotionGlow.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

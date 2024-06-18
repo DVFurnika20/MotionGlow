@@ -29,108 +29,47 @@ namespace MotionGlow.Controllers
             _soundSensorService = soundSensorService;
         }
 
-        public async Task<IActionResult> ESP32_DeviceDetails(int id)
+        public async Task<IActionResult> ESP32_DeviceDetails()
         {
-            var device = await _deviceService.GetDeviceByIdAsync(id);
-            if (device == null)
-            {
-                return View("Views/ESP32_DeviceDetails/ESP32_DeviceDetails.cshtml");
-            }
-
-            var viewModel = new ESP32_DeviceViewModel
+            var devices = await _deviceService.GetAllDevicesAsync();
+            var viewModels = devices.Select(device => new ESP32_DeviceViewModel
             {
                 DeviceName = device.DeviceName,
                 DeviceType = device.DeviceType,
                 Location = device.Location,
                 Description = device.Description
-            };
-            return NotFound();
+            }).ToList();
+
+            return View("Views/ESP32_DeviceDetails/ESP32_DeviceDetails.cshtml", viewModels);
         }
 
-        public async Task<IActionResult> PIRSensorDetails(int id)
+        public async Task<IActionResult> SensorActivityLogDetails()
         {
-            var pirSensor = await _pirSensorService.GetPIRSensorByIdAsync(id);
-            if (pirSensor == null)
-            {
-                return View("Views/PIRSensorDetails/PIRSensorDetails.cshtml");
-            }
+            var activityLogs = await _activityLogService.GetAllSensorActivityLogsAsync();
 
-            var viewModel = new PIRSensorViewModel
-            {
-                Device = new ESP32_DeviceViewModel
-                {
-                    DeviceName = pirSensor.Device.DeviceName,
-                    DeviceType = pirSensor.Device.DeviceType,
-                    Location = pirSensor.Device.Location,
-                    Description = pirSensor.Device.Description
-                }
-            };
-            return NotFound();
-        }
+            var viewModels = new List<SensorActivityLogViewModel>();
 
-        public async Task<IActionResult> SensorActivityLogDetails(int id)
-        {
-            var activityLog = await _activityLogService.GetSensorActivityLogByIdAsync(id);
-            if (activityLog == null)
+            foreach (var activityLog in activityLogs)
             {
-                return View("Views/SensorActivityLogDetails/SensorActivityLogDetails.cshtml");
-            }
+                var device = await _deviceService.GetDeviceByIdAsync(activityLog.DeviceID);
 
-            var viewModel = new SensorActivityLogViewModel
-            {
-                Timestamp = activityLog.Timestamp,
-                SoundLevel = activityLog.SoundLevel,
-                Distance = activityLog.Distance,
-                Device = new ESP32_DeviceViewModel
+                viewModels.Add(new SensorActivityLogViewModel
                 {
-                    DeviceName = activityLog.Device.DeviceName,
-                    DeviceType = activityLog.Device.DeviceType,
-                    Location = activityLog.Device.Location,
-                    Description = activityLog.Device.Description
-                },
-                PIRSensor = new PIRSensorViewModel
-                {
-                    Device = new ESP32_DeviceViewModel
+                    Timestamp = activityLog.Timestamp,
+                    SoundLevel = activityLog.SoundLevel,
+                    Distance = activityLog.Distance,
+                    DeviceId = activityLog.DeviceID,
+                    Device = device != null ? new ESP32_DeviceViewModel
                     {
-                        DeviceName = activityLog.PIRSensor.Device.DeviceName,
-                        DeviceType = activityLog.PIRSensor.Device.DeviceType,
-                        Location = activityLog.PIRSensor.Device.Location,
-                        Description = activityLog.PIRSensor.Device.Description
-                    }
-                },
-                SoundSensor = new SoundSensorViewModel
-                {
-                    Device = new ESP32_DeviceViewModel
-                    {
-                        DeviceName = activityLog.SoundSensor.Device.DeviceName,
-                        DeviceType = activityLog.SoundSensor.Device.DeviceType,
-                        Location = activityLog.SoundSensor.Device.Location,
-                        Description = activityLog.SoundSensor.Device.Description
-                    }
-                }
-            };
-            return NotFound();
-        }
-
-        public async Task<IActionResult> SoundSensorDetails(int id)
-        {
-            var soundSensor = await _soundSensorService.GetSoundSensorByIdAsync(id);
-            if (soundSensor == null)
-            {
-                return View("Views/SoundSensorDetails/SoundSensorDetails.cshtml");
+                        DeviceName = device.DeviceName,
+                        DeviceType = device.DeviceType,
+                        Location = device.Location,
+                        Description = device.Description
+                    } : null
+                });
             }
 
-            var viewModel = new SoundSensorViewModel
-            {
-                Device = new ESP32_DeviceViewModel
-                {
-                    DeviceName = soundSensor.Device.DeviceName,
-                    DeviceType = soundSensor.Device.DeviceType,
-                    Location = soundSensor.Device.Location,
-                    Description = soundSensor.Device.Description
-                }
-            };
-            return NotFound();
+            return View("Views/SensorActivityLogDetails/SensorActivityLogDetails.cshtml", viewModels);
         }
 
         public IActionResult Index()

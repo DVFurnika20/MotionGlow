@@ -1,14 +1,10 @@
-﻿@model MotionGlow.Models.ESP32_DeviceViewModel
+﻿@model List<MotionGlow.Models.ESP32_DeviceViewModel>
 
-@if (Model == null)
+@foreach (var device in Model)
 {
-<p>No data</p>
-}
-else
-{
-<h2>@Model.DeviceName Details</h2>
+    <h2>@device.DeviceName Details</h2>
 
-<p>Device Type: @Model.DeviceType</p>
-<p>Location: @Model.Location</p>
-<p>Description: @Model.Description</p>
+    <p>Device Type: @device.DeviceType</p>
+    <p>Location: @device.Location</p>
+    <p>Description: @device.Description</p>
 }

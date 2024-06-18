@@ -23,4 +23,9 @@
       </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\SoundSensorDetails\SoundSensorDetails.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\PIRSensorDetails\PIRSensorDetails.cshtml" />
+    </ItemGroup>
+
 </Project>
