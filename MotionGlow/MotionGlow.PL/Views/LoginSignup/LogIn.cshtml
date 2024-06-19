@@ -1,0 +1,10 @@
+﻿@model List<MotionGlow.Models.ESP32_DeviceViewModel>
+
+@foreach (var device in Model)
+{
+    <h2>@device.DeviceName Details</h2>
+
+    <p>Device Type: @device.DeviceType</p>
+    <p>Location: @device.Location</p>
+    <p>Description: @device.Description</p>
+}

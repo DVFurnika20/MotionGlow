@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>@ViewData["Title"] - MotionGlow.PL</title>
+    <title>@ViewData["Title"] - MotionGlow</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/MotionGlow.PL.styles.css" asp-append-version="true"/>
@@ -23,13 +23,16 @@
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ESP32_DeviceDetails">ESP32 Device Details</a>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Details" asp-action="ESP32_DeviceDetails">ESP32 Device Details</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="SensorActivityLogDetails">Sensor Activity Log Details</a>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Details" asp-action="SensorActivityLogDetails">Sensor Activity Log Details</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="SignUp">Sign Up</a>
                     </li>
                 </ul>
             </div>
@@ -44,7 +47,7 @@
 
 <footer class="border-top footer text-muted">
     <div class="container">
-        &copy; 2024 - MotionGlow.PL - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        &copy; 2024 - MotionGlow
     </div>
 </footer>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
