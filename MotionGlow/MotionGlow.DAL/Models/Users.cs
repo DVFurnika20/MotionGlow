@@ -10,7 +10,7 @@ namespace MotionGlow.DAL.Models;
 public partial class User
 {
     [Key]
-    public int UserID { get; set; }
+    public int UsersID { get; set; } // Changed from UserID to UsersID
 
     [StringLength(100)]
     [Unicode(false)]

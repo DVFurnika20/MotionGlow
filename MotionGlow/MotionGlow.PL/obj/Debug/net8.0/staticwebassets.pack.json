@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\MotionGlow.PL.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Famouscave\\RiderProjects\\arduino-projects-11A\\MotionGlow\\MotionGlow.PL\\wwwroot\\css\\buttons.css",
+      "PackagePath": "staticwebassets\\css\\buttons.css"
+    },
+    {
       "Id": "C:\\Users\\Famouscave\\RiderProjects\\arduino-projects-11A\\MotionGlow\\MotionGlow.PL\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

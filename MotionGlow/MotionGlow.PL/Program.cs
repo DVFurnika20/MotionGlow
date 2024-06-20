@@ -41,6 +41,7 @@ namespace MotionGlow
 
             // Add other services (like your business logic services)
             services.AddScoped<IESP32_DeviceService, ESP32_DeviceService>();
+            services.AddScoped<IUserService, UserService>();
             services.AddScoped<IPIRSensorService, PIRSensorService>();
             services.AddScoped<ISensorActivityLogService, SensorActivityLogService>();
             services.AddScoped<ISoundSensorService, SoundSensorService>();

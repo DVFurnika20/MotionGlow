@@ -1,10 +1,24 @@
-﻿@model List<MotionGlow.Models.ESP32_DeviceViewModel>
+﻿<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - Login</title>
+    <link rel="stylesheet" href="~/css/buttons.css" />
+</head>
 
-@foreach (var device in Model)
-{
-    <h2>@device.DeviceName Details</h2>
-
-    <p>Device Type: @device.DeviceType</p>
-    <p>Location: @device.Location</p>
-    <p>Description: @device.Description</p>
-}
+<div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+        <h2>Already have an account?<br><br></h2>
+        <form method="post" class="col-lg-6">
+            <h3>Login here:</h3>
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <input type="email" class="form-control" id="Email" name="Email" required>
+            </div>
+            <div class="form-group">
+                <label for="Password">Password</label>
+                <input type="password" class="form-control" id="Password" name="Password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+</div>

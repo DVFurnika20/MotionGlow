@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MotionGlow.BLL.Services
 {
-    public class UsersService : IUserService
+    public class UserService : IUserService
     {
         private readonly MotionGlowDbContext _dbContext;
 
-        public UsersService(MotionGlowDbContext dbContext)
+        public UserService(MotionGlowDbContext dbContext)
         {
             _dbContext = dbContext;
         }
@@ -19,6 +19,11 @@ namespace MotionGlow.BLL.Services
         public async Task<IEnumerable<User>> GetAllUsersAsync()
         {
             return await _dbContext.Users.ToListAsync();
+        }
+        
+        public async Task<User> GetUserByEmailAsync(string email)
+        {
+            return await _dbContext.Users.FirstOrDefaultAsync(u => u.Email == email);
         }
 
         public async Task<User> GetUserByIdAsync(int id)

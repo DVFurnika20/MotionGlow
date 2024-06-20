@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QwSIDNu5dtKywFWEDbwzuNuJCSxo5ArblQqckBC7ZY8=",
+  "Hash": "81SsZ/AcaSqtNwzuhvHz16H9wHmt9UZ64rj6Jjn8n5A=",
   "Source": "MotionGlow.PL",
   "BasePath": "_content/MotionGlow.PL",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Famouscave\\RiderProjects\\arduino-projects-11A\\MotionGlow\\MotionGlow.PL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MotionGlow.PL.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Famouscave\\RiderProjects\\arduino-projects-11A\\MotionGlow\\MotionGlow.PL\\wwwroot\\css\\buttons.css",
+      "SourceId": "MotionGlow.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Famouscave\\RiderProjects\\arduino-projects-11A\\MotionGlow\\MotionGlow.PL\\wwwroot\\",
+      "BasePath": "_content/MotionGlow.PL",
+      "RelativePath": "css/buttons.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\buttons.css"
     },
     {
       "Identity": "C:\\Users\\Famouscave\\RiderProjects\\arduino-projects-11A\\MotionGlow\\MotionGlow.PL\\wwwroot\\css\\site.css",

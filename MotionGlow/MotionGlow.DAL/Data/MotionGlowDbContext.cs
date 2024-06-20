@@ -66,7 +66,7 @@ public partial class MotionGlowDbContext : DbContext
         
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserID).HasName("PK__Users__1788CC4C4A3A3C3D");
+            entity.HasKey(e => e.UsersID).HasName("PK__Users__1788CC4C4A3A3C3D");
 
             entity.HasIndex(e => e.Email, "idx_Email").IsUnique();
 
