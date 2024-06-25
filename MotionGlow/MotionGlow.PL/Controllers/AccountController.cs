@@ -5,7 +5,10 @@ using MotionGlow.Models;
 using MotionGlow.BLL.IServices;
 using System.Linq;
 using System.Collections.Generic;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using MotionGlow.DAL.Models;
 
 namespace MotionGlow.Controllers
@@ -22,7 +25,7 @@ namespace MotionGlow.Controllers
         [HttpGet]
         public IActionResult Login()
         {
-            return View("Views/LoginSignup/LogIn.cshtml");
+            return View("~/Views/LoginSignup/LogIn.cshtml");
         }
 
         [HttpPost]
@@ -33,21 +36,32 @@ namespace MotionGlow.Controllers
                 var user = await _usersService.GetUserByEmailAsync(model.Email);
                 if (user != null && user.Password == model.Password)
                 {
-                    // Log the user in and redirect to a different page
+                    var claims = new List<Claim>
+                    {
+                        new Claim(ClaimTypes.Name, user.Email),
+                        new Claim(ClaimTypes.Role, user.IsAdmin ? "Admin" : "User")
+                    };
+
+                    var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    var authProperties = new AuthenticationProperties();
+
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
+
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Invalid login attempt.");
+                    ViewData["ErrorMessage"] = "Invalid email or password.";
                 }
             }
 
-            return View(model);
+            return View("~/Views/LoginSignupError/LogInError.cshtml", model);
         }
 
         [HttpGet]
         public IActionResult SignUp()
         {
-            return View("Views/LoginSignup/SignUp.cshtml");
+            return View("~/Views/LoginSignup/SignUp.cshtml");
         }
 
         [HttpPost]
@@ -63,20 +77,38 @@ namespace MotionGlow.Controllers
                         FirstName = model.FirstName,
                         LastName = model.LastName,
                         Email = model.Email,
-                        Password = model.Password // Replace with actual password hashing
+                        Password = model.Password
                     };
 
                     await _usersService.AddUserAsync(user);
 
-                    // Log the user in and redirect to a different page
+                    var claims = new List<Claim>
+                    {
+                        new Claim(ClaimTypes.Name, user.Email)
+                        // Add other claims as needed
+                    };
+
+                    var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    var authProperties = new AuthenticationProperties();
+
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
+
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                 {
                     ModelState.AddModelError("", "Email is already in use.");
+                    ModelState.AddModelError("", "Invalid email or password."); // Add this line
                 }
             }
 
-            return View(model);
+            return View("~/Views/LoginSignupError/SignUpError.cshtml", model);
+        }
+        
+        public async Task<IActionResult> SignOut()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Index", "Home");
         }
     }
 }

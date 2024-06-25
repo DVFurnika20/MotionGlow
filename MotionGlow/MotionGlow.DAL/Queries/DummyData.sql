@@ -21,8 +21,7 @@ VALUES (1, 1, 1, GETDATE(), 10, 1.5),
 -- Insert into Users table
 INSERT INTO [Users] (FirstName, LastName, Email, [Password], IsAdmin)
 VALUES ('User1', 'Last1', 'user1@example.com', 'password1', 0),
-       ('User2', 'Last2', 'user2@example.com', 'password2', 1),
-       ('User3', 'Last3', 'user3@example.com', 'password3', 0);
+	   ('Admin', 'Adminston', 'admin@gmail.com', 'admin123', 1),
 
 	   -- Update ESP32_Device table
 UPDATE ESP32_Device
@@ -43,8 +42,3 @@ WHERE SensorID IN (1, 2, 3);
 UPDATE SensorActivityLog
 SET DeviceID = 1, SoundSensorID = 1, PIRSensorID = 1, Timestamp = GETDATE(), SoundLevel = 50, Distance = 5.5
 WHERE LogID IN (1, 2, 3);
-
--- Update Users table
-UPDATE [Users]
-SET FirstName = 'UpdatedFirst', LastName = 'UpdatedLast', Email = 'updated@example.com', [Password] = 'updatedPassword', IsAdmin = 1
-WHERE UsersID IN (1, 2, 3);

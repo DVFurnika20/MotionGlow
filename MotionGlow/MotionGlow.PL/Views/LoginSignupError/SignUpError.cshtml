@@ -1,0 +1,35 @@
+﻿<div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+        <h3 style="color: #FF6347;">Oops, seems you have made a mistake while signing up!<br><br></h3>
+        <ul style="color: #FF6347;">
+            <li>Email must be a valid email address.</li>
+            <li>Password must be at least 6 characters long.</li>
+            <li>Password must contain at least one number.</li>
+            <li>Passwords must match.</li>
+        </ul>
+        <form method="post" class="col-lg-6">
+            <h3>Register here:</h3>
+            <div class="form-group">
+                <label for="FirstName">First Name</label>
+                <input type="text" class="form-control" id="FirstName" name="FirstName" required>
+            </div>
+            <div class="form-group">
+                <label for="LastName">Last Name</label>
+                <input type="text" class="form-control" id="LastName" name="LastName" required>
+            </div>
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <input type="email" class="form-control" id="Email" name="Email" required>
+            </div>
+            <div class="form-group">
+                <label for="Password">Password</label>
+                <input type="password" class="form-control" id="Password" name="Password" required>
+            </div>
+            <div class="form-group">
+                <label for="RepeatPassword">Repeat Password</label>
+                <input type="password" class="form-control" id="RepeatPassword" name="RepeatPassword" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+    </div>
+</div>

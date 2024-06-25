@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using MotionGlow.BLL.IServices;
 using MotionGlow.BLL.Services;
@@ -38,6 +39,14 @@ namespace MotionGlow
 
             // Register services
             services.AddControllersWithViews();
+            
+            services.AddAuthentication(options => 
+                {
+                    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                    options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                })
+                .AddCookie();
 
             // Add other services (like your business logic services)
             services.AddScoped<IESP32_DeviceService, ESP32_DeviceService>();
@@ -65,6 +74,7 @@ namespace MotionGlow
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

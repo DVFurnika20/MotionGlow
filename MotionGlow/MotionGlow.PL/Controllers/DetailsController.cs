@@ -31,7 +31,7 @@ namespace MotionGlow.Controllers
                 Description = device.Description
             }).ToList();
 
-            return View("Views/ESP32_DeviceDetails/ESP32_DeviceDetails.cshtml", viewModels);
+            return View("~/Views/ESP32_DeviceDetails/ESP32_DeviceDetails.cshtml", viewModels);
         }
 
         public async Task<IActionResult> SensorActivityLogDetails()
@@ -60,7 +60,7 @@ namespace MotionGlow.Controllers
                 });
             }
 
-            return View("Views/SensorActivityLogDetails/SensorActivityLogDetails.cshtml", viewModels);
+            return View("~/Views/SensorActivityLogDetails/SensorActivityLogDetails.cshtml", viewModels);
         }
     }
 }
