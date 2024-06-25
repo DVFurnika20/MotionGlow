@@ -1,38 +1,51 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+ViewData["Title"] = "Home Page";
+}
+@section AdditionalStyles {
+<link rel="stylesheet" href="~/css/index.css" />
 }
 
-<div class="text-center">
-    <h2 style="margin-bottom: 40px;">MotionGlow Statistics</h2>
-</div>
 
 <div class="row">
     <div class="col-md-6">
-        <canvas id="myPieChart"></canvas>
+        <p>This line chart represents sound input averages and most common values</p>
+        <canvas id="myLineChart"></canvas>
     </div>
     <div class="col-md-6">
+        <p>This bar chart represents activity on week days</p>
         <canvas id="myBarChart"></canvas>
     </div>
 </div>
 
+<div class="row justify-content-center">
+    <div class="col-md-6 d-flex justify-content-center align-items-center" style="height: 100%; margin: 40px;">
+        <p>This pie chart represents total count of logs reached out of the weekly goal</p>
+        <div style="width: 120%; height: 120%;">
+            <canvas id="myPieChart"></canvas>
+        </div>
+    </div>
+</div>
+
 @section Scripts {
-<script>
-    var ctxPie = document.getElementById('myPieChart').getContext('2d');
-    var myPieChart = new Chart(ctxPie, {
-        type: 'pie',
+    <script>
+    var ctxLine = document.getElementById('myLineChart').getContext('2d');
+    var myLineChart = new Chart(ctxLine, {
+        type: 'line',
         data: {
             labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
             datasets: [{
                 data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ]
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
             }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
         }
     });
 
@@ -71,5 +84,29 @@
             }
         }
     });
+
+    var ctxPie = document.getElementById('myPieChart').getContext('2d');
+    var totalCount = 100;
+    var reachedCount = 20;
+    var notReachedCount = totalCount - reachedCount;
+    var myPieChart = new Chart(ctxPie, {
+        type: 'pie',
+        data: {
+            labels: [reachedCount + ' reached at the moment', totalCount + ' in total needed'],
+            datasets: [{
+                data: [reachedCount, notReachedCount],
+                backgroundColor: ['green', 'gray'],
+                borderColor: ['green', 'gray'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: false,
+            maintainAspectRatio: false,
+            animation: {
+                duration: 2000 // slows down the animation
+            }
+        }
+});
 </script>
 }

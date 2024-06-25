@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link id="stylesheet" rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/MotionGlow.PL.styles.css" asp-append-version="true"/>
+    @RenderSection("AdditionalStyles", required: false)
 </head>
 <body>
 <header>
@@ -77,6 +78,7 @@
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>
 @await RenderSectionAsync("Scripts", required: false)
+@RenderSection("AdditionalScripts", required: false)
 <script>
     $(document).ready(function() {
         $('#darkModeToggle').click(function() {
