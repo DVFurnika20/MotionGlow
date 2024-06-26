@@ -8,18 +8,18 @@ ViewData["Title"] = "Home Page";
 
 <div class="row">
     <div class="col-md-6">
-        <p>This line chart represents sound input averages and most common values</p>
+        <p>This line chart represents sound input values throughout the day</p>
         <canvas id="myLineChart"></canvas>
     </div>
     <div class="col-md-6">
-        <p>This bar chart represents activity on week days</p>
+        <p>This bar chart represents logs per week days</p>
         <canvas id="myBarChart"></canvas>
     </div>
 </div>
 
 <div class="row justify-content-center">
     <div class="col-md-6 d-flex justify-content-center align-items-center" style="height: 100%; margin: 40px;">
-        <p>This pie chart represents total count of logs reached out of the weekly goal</p>
+        <p>This pie chart represents percentage of logs per device</p>
         <div style="width: 120%; height: 120%;">
             <canvas id="myPieChart"></canvas>
         </div>
@@ -28,85 +28,97 @@ ViewData["Title"] = "Home Page";
 
 @section Scripts {
     <script>
-    var ctxLine = document.getElementById('myLineChart').getContext('2d');
-    var myLineChart = new Chart(ctxLine, {
-        type: 'line',
-        data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderColor: 'rgba(75, 192, 192, 1)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
+        var soundLevelsToday = @Html.Raw(Json.Serialize(ViewData["SoundLevelsToday"]));
+        var labels = Object.keys(soundLevelsToday);
+        var data = Object.values(soundLevelsToday);
+        var backgroundColorsLine = labels.map(() => '#' + Math.floor(Math.random()*16777215).toString(16));
+
+        var ctxLine = document.getElementById('myLineChart').getContext('2d');
+        var myLineChart = new Chart(ctxLine, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Sound levels',
+                    data: data,
+                    backgroundColor: backgroundColorsLine,
+                    borderColor: backgroundColorsLine,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Hour of the Day'
+                        }
+                    }
                 }
             }
-        }
-    });
+        });
 
-    var ctxBar = document.getElementById('myBarChart').getContext('2d');
-    var myBarChart = new Chart(ctxBar, {
-        type: 'bar',
-        data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
+        var logsPerDayOfWeek = @Html.Raw(Json.Serialize(ViewData["LogsPerDayOfWeek"]));
+        var labels = Object.keys(logsPerDayOfWeek);
+        var data = Object.values(logsPerDayOfWeek);
+        var backgroundColorsBar = labels.map(() => '#' + Math.floor(Math.random()*16777215).toString(16));
+
+        var ctxBar = document.getElementById('myBarChart').getContext('2d');
+        var myBarChart = new Chart(ctxBar, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Number of Logs per week days',
+                    data: data,
+                    backgroundColor: backgroundColorsBar,
+                    borderColor: backgroundColorsBar,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Day of the Week'
+                        }
+                    }
                 }
             }
-        }
-    });
+        })
 
-    var ctxPie = document.getElementById('myPieChart').getContext('2d');
-    var totalCount = 100;
-    var reachedCount = 20;
-    var notReachedCount = totalCount - reachedCount;
-    var myPieChart = new Chart(ctxPie, {
-        type: 'pie',
-        data: {
-            labels: [reachedCount + ' reached at the moment', totalCount + ' in total needed'],
-            datasets: [{
-                data: [reachedCount, notReachedCount],
-                backgroundColor: ['green', 'gray'],
-                borderColor: ['green', 'gray'],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: false,
-            maintainAspectRatio: false,
-            animation: {
-                duration: 2000 // slows down the animation
+        var totalCount = @ViewData["TotalCount"];
+        var logsPerDevice = @Html.Raw(Json.Serialize(ViewData["LogsPerDevice"]));
+        var labels = Object.keys(logsPerDevice);
+        var data = Object.values(logsPerDevice).map(count => (count / totalCount) * 100);
+        var backgroundColors = labels.map(() => '#' + Math.floor(Math.random()*16777215).toString(16));
+
+        var ctxPie = document.getElementById('myPieChart').getContext('2d');
+        var myPieChart = new Chart(ctxPie, {
+            type: 'pie',
+            data: {
+                labels: labels,
+                datasets: [{
+                    data: data,
+                    backgroundColor: backgroundColors,
+                    borderColor: backgroundColors,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: false,
+                maintainAspectRatio: false,
+                animation: {
+                    duration: 2000
+                }
             }
-        }
-});
+        });
 </script>
 }
