@@ -79,6 +79,10 @@ VALUES
 (1, 1, 1, DATEADD(hour, 22, GETDATE()), 190, 23.5), -- 22:00
 (1, 1, 1, DATEADD(hour, 23, GETDATE()), 200, 24.5); -- 23:00
 
+SELECT COUNT(*) AS ThursdayCount
+FROM SensorActivityLog
+WHERE DATENAME(dw, Timestamp) = 'Wednesday'
+
 -- Insert into Users table
 INSERT INTO [Users] (FirstName, LastName, Email, [Password], IsAdmin)
 VALUES ('User1', 'Last1', 'user1@example.com', 'password1', 0),
