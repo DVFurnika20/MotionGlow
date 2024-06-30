@@ -7,11 +7,13 @@ const char* mqtt_server = "6bd41be0555a4776852edeaf2e397702.s1.eu.hivemq.cloud";
 const int mqtt_port = 8883;
 const char* mqtt_user = "MQTTServerESP";
 const char* mqtt_password = "ArduinoProject1";
+#define CLIENT_ID "6"
+#define WiFiName "baguest"
+#define WiFiPassword "dadadadada"
 
 // MQTT topic names
-const char* pir_topic = "pir_sensor";
-const char* sound_topic = "sound_sensor";
-const char* client_id = "client_id";
+const char* pir_topic = CLIENT_ID "/pir_sensor";
+const char* sound_topic = CLIENT_ID "/sound_sensor";
 
 WiFiClientSecure espClient;
 PubSubClient client(espClient);
@@ -62,13 +64,23 @@ void setup() {
   Serial.begin(9600);
 
   // Connect to WiFi
-  WiFi.begin("baguest", "dadadadada");
-  while (WiFi.status() != WL_CONNECTED) {
+  WiFiConnection();
+
+  // Connect to MQTT broker
+  MQTTConnection();
+}
+
+void WiFiConnection()
+{
+   WiFi.begin(WiFiName, WiFiPassword);
+   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);
     Serial.println("Connecting to WiFi...");
   }
+}
 
-  // Connect to MQTT broker
+void MQTTConnection()
+{
   espClient.setCACert(root_ca);
   client.setServer(mqtt_server, mqtt_port);
   
@@ -86,6 +98,14 @@ void setup() {
 
 void loop() {
 
+  if (WiFi.status() != WL_CONNECTED) {
+    WiFiConnection();
+  }
+
+  if (!client.connected()) {
+    MQTTConnection();
+  }
+
   // Read and write PIR sensor data
   bool pir_value = digitalRead(5);
   Serial.print("PIR Value: ");
@@ -101,7 +121,6 @@ void loop() {
   {
     client.publish(pir_topic, String(pir_value).c_str());
     client.publish(sound_topic, String(sound_level).c_str()); 
-    client.publish(client_id, "6");
 
     // Wait 3 seconds before possibly trying to publish again
     delay(3000);
@@ -110,7 +129,6 @@ void loop() {
   {
     client.publish(pir_topic, String(pir_value).c_str());
     client.publish(sound_topic, String(sound_level).c_str()); 
-    client.publish(client_id, "6");
 
     // Wait 3 seconds before possibly trying to publish again
     delay(3000);

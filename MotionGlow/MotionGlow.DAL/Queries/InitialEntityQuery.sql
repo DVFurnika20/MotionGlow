@@ -1,29 +1,34 @@
-CREATE DATABASE MotionGlow;
-
-USE MotionGlow;
+CREATE DATABASE MotionGlow1;
+USE MotionGlow1;
 
 -- Create the ESP32_Device table
 CREATE TABLE ESP32_Device (
-    DeviceID INT PRIMARY KEY IDENTITY(1,1),
+    DeviceID INT PRIMARY KEY,
     DeviceName VARCHAR(100) NOT NULL,
     DeviceType VARCHAR(50) NOT NULL,
     Location VARCHAR(100) NOT NULL,
     Description TEXT
 );
 
+INSERT INTO ESP32_Device (DeviceID, DeviceName, DeviceType, Location) VALUES (-1, 'None', 'Nonexistant', 'Backrooms')
+
 -- Create the SoundSensor table
 CREATE TABLE SoundSensor (
-    SensorID INT PRIMARY KEY IDENTITY(1,1),
+    SensorID INT PRIMARY KEY IDENTITY(0,1),
     DeviceID INT NOT NULL,
     FOREIGN KEY (DeviceID) REFERENCES ESP32_Device(DeviceID)
 );
 
+INSERT INTO SoundSensor (DeviceID) VALUES (0)
+
 -- Create the PIRSensor table
 CREATE TABLE PIRSensor (
-    SensorID INT PRIMARY KEY IDENTITY(1,1),
+    SensorID INT PRIMARY KEY IDENTITY(0,1),
     DeviceID INT NOT NULL,
     FOREIGN KEY (DeviceID) REFERENCES ESP32_Device(DeviceID)
 );
+
+INSERT INTO PIRSensor (DeviceID) VALUES (0)
 
 -- Create the SensorActivityLog table
 CREATE TABLE SensorActivityLog (
