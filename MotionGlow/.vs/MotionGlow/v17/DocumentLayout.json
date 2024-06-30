@@ -3,36 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|c:\\users\\kaloy\\source\\repos\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.bll\\services\\pirsensorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|solutionrelative:motionglow.bll\\services\\pirsensorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|c:\\users\\kaloy\\source\\repos\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.bll\\services\\esp32_deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|solutionrelative:motionglow.bll\\services\\esp32_deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|c:\\users\\kaloy\\source\\repos\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.bll\\services\\mqttservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|solutionrelative:motionglow.bll\\services\\mqttservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|c:\\users\\kaloy\\source\\repos\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.bll\\iservices interfaces\\imqttservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|solutionrelative:motionglow.bll\\iservices interfaces\\imqttservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E007E1CD-A44E-4911-89E4-58B8C79DC3B8}|MotionGlow.PL\\MotionGlow.PL.csproj|c:\\users\\kaloy\\source\\repos\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E007E1CD-A44E-4911-89E4-58B8C79DC3B8}|MotionGlow.PL\\MotionGlow.PL.csproj|solutionrelative:motionglow.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|c:\\users\\kaloy\\source\\repos\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.bll\\services\\pirsensorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|solutionrelative:motionglow.bll\\services\\pirsensorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B62BFB87-1B71-4066-B7A1-88711D40C9DB}|MotionGlow.DAL\\MotionGlow.DAL.csproj|c:\\users\\kaloy\\source\\repos\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.dal\\data\\motionglowdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B62BFB87-1B71-4066-B7A1-88711D40C9DB}|MotionGlow.DAL\\MotionGlow.DAL.csproj|solutionrelative:motionglow.dal\\data\\motionglowdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|c:\\users\\kaloy\\source\\repos\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.bll\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|solutionrelative:motionglow.bll\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|c:\\users\\kaloy\\source\\repos\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.bll\\services\\soundsensorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|solutionrelative:motionglow.bll\\services\\soundsensorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E007E1CD-A44E-4911-89E4-58B8C79DC3B8}|MotionGlow.PL\\MotionGlow.PL.csproj|c:\\users\\kaloy\\source\\repos\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.pl\\controllers\\detailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E007E1CD-A44E-4911-89E4-58B8C79DC3B8}|MotionGlow.PL\\MotionGlow.PL.csproj|solutionrelative:motionglow.pl\\controllers\\detailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|c:\\users\\kaloy\\source\\repos\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.bll\\services\\sensoractivitylogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|solutionrelative:motionglow.bll\\services\\sensoractivitylogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|c:\\users\\kaloy\\source\\repos\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.bll\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|solutionrelative:motionglow.bll\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B62BFB87-1B71-4066-B7A1-88711D40C9DB}|MotionGlow.DAL\\MotionGlow.DAL.csproj|c:\\users\\kaloy\\source\\repos\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.dal\\models\\pirsensor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B62BFB87-1B71-4066-B7A1-88711D40C9DB}|MotionGlow.DAL\\MotionGlow.DAL.csproj|solutionrelative:motionglow.dal\\models\\pirsensor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|c:\\users\\kaloy\\source\\repos\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.bll\\iservices interfaces\\imqttservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|solutionrelative:motionglow.bll\\iservices interfaces\\imqttservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E007E1CD-A44E-4911-89E4-58B8C79DC3B8}|MotionGlow.PL\\MotionGlow.PL.csproj|c:\\users\\kaloy\\source\\repos\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.pl\\controllers\\detailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E007E1CD-A44E-4911-89E4-58B8C79DC3B8}|MotionGlow.PL\\MotionGlow.PL.csproj|solutionrelative:motionglow.pl\\controllers\\detailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E007E1CD-A44E-4911-89E4-58B8C79DC3B8}|MotionGlow.PL\\MotionGlow.PL.csproj|c:\\users\\kaloy\\source\\repos\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.pl\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,16 +63,8 @@
       "RelativeMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|solutionrelative:motionglow.bll\\iservices interfaces\\iusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B62BFB87-1B71-4066-B7A1-88711D40C9DB}|MotionGlow.DAL\\MotionGlow.DAL.csproj|c:\\users\\kaloy\\source\\repos\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.dal\\models\\pirsensor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B62BFB87-1B71-4066-B7A1-88711D40C9DB}|MotionGlow.DAL\\MotionGlow.DAL.csproj|solutionrelative:motionglow.dal\\models\\pirsensor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B62BFB87-1B71-4066-B7A1-88711D40C9DB}|MotionGlow.DAL\\MotionGlow.DAL.csproj|c:\\users\\kaloy\\source\\repos\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.dal\\models\\sensordata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B62BFB87-1B71-4066-B7A1-88711D40C9DB}|MotionGlow.DAL\\MotionGlow.DAL.csproj|solutionrelative:motionglow.dal\\models\\sensordata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|c:\\users\\kaloy\\source\\repos\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.bll\\services\\sensoractivitylogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|solutionrelative:motionglow.bll\\services\\sensoractivitylogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E007E1CD-A44E-4911-89E4-58B8C79DC3B8}|MotionGlow.PL\\MotionGlow.PL.csproj|c:\\users\\kaloy\\source\\repos\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.pl\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -91,10 +95,6 @@
       "RelativeMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|solutionrelative:motionglow.bll\\iservices interfaces\\ipirsensorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|c:\\users\\kaloy\\source\\repos\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.bll\\services\\esp32_deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBC46CA7-CBA2-46A2-B115-49849ED9CCC6}|MotionGlow.BLL\\MotionGlow.BLL.csproj|solutionrelative:motionglow.bll\\services\\esp32_deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E007E1CD-A44E-4911-89E4-58B8C79DC3B8}|MotionGlow.PL\\MotionGlow.PL.csproj|c:\\users\\kaloy\\source\\repos\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.pl\\controllers\\sensorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E007E1CD-A44E-4911-89E4-58B8C79DC3B8}|MotionGlow.PL\\MotionGlow.PL.csproj|solutionrelative:motionglow.pl\\controllers\\sensorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -118,73 +118,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\Program.cs",
-              "RelativeDocumentMoniker": "MotionGlow.PL\\Program.cs",
-              "ToolTip": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\Program.cs",
-              "RelativeToolTip": "MotionGlow.PL\\Program.cs",
-              "ViewState": "AQIAAFAAAAAAAAAAAAAuwFkAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T18:19:21.922Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MQTTService.cs",
-              "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\Services\\MQTTService.cs",
-              "RelativeDocumentMoniker": "MotionGlow.BLL\\Services\\MQTTService.cs",
-              "ToolTip": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\Services\\MQTTService.cs",
-              "RelativeToolTip": "MotionGlow.BLL\\Services\\MQTTService.cs",
-              "ViewState": "AQIAAE0AAAAAAAAAAAAIwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T13:56:55.733Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 8,
               "Title": "PIRSensor.cs",
               "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.DAL\\Models\\PIRSensor.cs",
               "RelativeDocumentMoniker": "MotionGlow.DAL\\Models\\PIRSensor.cs",
               "ToolTip": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.DAL\\Models\\PIRSensor.cs",
               "RelativeToolTip": "MotionGlow.DAL\\Models\\PIRSensor.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABuAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T15:01:12.164Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DetailsController.cs",
-              "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\Controllers\\DetailsController.cs",
-              "RelativeDocumentMoniker": "MotionGlow.PL\\Controllers\\DetailsController.cs",
-              "ToolTip": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\Controllers\\DetailsController.cs",
-              "RelativeToolTip": "MotionGlow.PL\\Controllers\\DetailsController.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAADwv0EAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T21:20:07.506Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SoundSensorService.cs",
-              "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\Services\\SoundSensorService.cs",
-              "RelativeDocumentMoniker": "MotionGlow.BLL\\Services\\SoundSensorService.cs",
-              "ToolTip": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\Services\\SoundSensorService.cs",
-              "RelativeToolTip": "MotionGlow.BLL\\Services\\SoundSensorService.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAwwAkAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T21:59:47.838Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-29T15:01:12.164Z"
             },
             {
               "$type": "Document",
@@ -194,40 +140,75 @@
               "RelativeDocumentMoniker": "MotionGlow.DAL\\Data\\MotionGlowDbContext.cs",
               "ToolTip": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.DAL\\Data\\MotionGlowDbContext.cs",
               "RelativeToolTip": "MotionGlow.DAL\\Data\\MotionGlowDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAAVAAAA",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAuwFYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T21:58:11.194Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T21:58:11.194Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "PIRSensorService.cs",
               "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\Services\\PIRSensorService.cs",
               "RelativeDocumentMoniker": "MotionGlow.BLL\\Services\\PIRSensorService.cs",
               "ToolTip": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\Services\\PIRSensorService.cs",
               "RelativeToolTip": "MotionGlow.BLL\\Services\\PIRSensorService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-27T20:35:58.688Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\Models\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "MotionGlow.PL\\Models\\LoginViewModel.cs",
-              "ToolTip": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\Models\\LoginViewModel.cs",
-              "RelativeToolTip": "MotionGlow.PL\\Models\\LoginViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "ESP32_DeviceService.cs",
+              "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\Services\\ESP32_DeviceService.cs",
+              "RelativeDocumentMoniker": "MotionGlow.BLL\\Services\\ESP32_DeviceService.cs",
+              "ToolTip": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\Services\\ESP32_DeviceService.cs",
+              "RelativeToolTip": "MotionGlow.BLL\\Services\\ESP32_DeviceService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABUAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T12:47:17.736Z",
+              "WhenOpened": "2024-06-27T21:58:40.848Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 7,
+              "Title": "SensorActivityLogService.cs",
+              "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\Services\\SensorActivityLogService.cs",
+              "RelativeDocumentMoniker": "MotionGlow.BLL\\Services\\SensorActivityLogService.cs",
+              "ToolTip": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\Services\\SensorActivityLogService.cs",
+              "RelativeToolTip": "MotionGlow.BLL\\Services\\SensorActivityLogService.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAIwDIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-29T18:10:09.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SoundSensorService.cs",
+              "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\Services\\SoundSensorService.cs",
+              "RelativeDocumentMoniker": "MotionGlow.BLL\\Services\\SoundSensorService.cs",
+              "ToolTip": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\Services\\SoundSensorService.cs",
+              "RelativeToolTip": "MotionGlow.BLL\\Services\\SoundSensorService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAqwAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T21:59:47.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "MotionGlow.BLL\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\Services\\UserService.cs",
+              "RelativeToolTip": "MotionGlow.BLL\\Services\\UserService.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwBAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-29T14:49:46.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "MotionGlow.PL\\Views\\Home\\Index.cshtml",
@@ -235,12 +216,35 @@
               "RelativeToolTip": "MotionGlow.PL\\Views\\Home\\Index.cshtml",
               "ViewState": "AQIAAAwAAAAAAAAAAIBJwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-28T15:34:48.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T15:34:48.028Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\Models\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "MotionGlow.PL\\Models\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\Models\\LoginViewModel.cs",
+              "RelativeToolTip": "MotionGlow.PL\\Models\\LoginViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T12:47:17.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DetailsController.cs",
+              "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\Controllers\\DetailsController.cs",
+              "RelativeDocumentMoniker": "MotionGlow.PL\\Controllers\\DetailsController.cs",
+              "ToolTip": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\Controllers\\DetailsController.cs",
+              "RelativeToolTip": "MotionGlow.PL\\Controllers\\DetailsController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAADwv0EAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T21:20:07.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "IMQTTService.cs",
               "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\IServices interfaces\\IMQTTService.cs",
               "RelativeDocumentMoniker": "MotionGlow.BLL\\IServices interfaces\\IMQTTService.cs",
@@ -248,12 +252,11 @@
               "RelativeToolTip": "MotionGlow.BLL\\IServices interfaces\\IMQTTService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T21:16:26.347Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T21:16:26.347Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "SensorData.cs",
               "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.DAL\\Models\\SensorData.cs",
               "RelativeDocumentMoniker": "MotionGlow.DAL\\Models\\SensorData.cs",
@@ -261,25 +264,11 @@
               "RelativeToolTip": "MotionGlow.DAL\\Models\\SensorData.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T21:43:34.236Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T21:43:34.236Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "MotionGlow.BLL\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\Services\\UserService.cs",
-              "RelativeToolTip": "MotionGlow.BLL\\Services\\UserService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T14:49:46.212Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "MotionGlow.PL\\Controllers\\AccountController.cs",
@@ -287,12 +276,11 @@
               "RelativeToolTip": "MotionGlow.PL\\Controllers\\AccountController.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAADgvxMAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T12:46:10.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T12:46:10.136Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "IUsersService.cs",
               "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\IServices interfaces\\IUsersService.cs",
               "RelativeDocumentMoniker": "MotionGlow.BLL\\IServices interfaces\\IUsersService.cs",
@@ -300,12 +288,11 @@
               "RelativeToolTip": "MotionGlow.BLL\\IServices interfaces\\IUsersService.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAYAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T12:46:13.474Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T12:46:13.474Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "LogIn.cshtml",
               "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\Views\\LoginSignup\\LogIn.cshtml",
               "RelativeDocumentMoniker": "MotionGlow.PL\\Views\\LoginSignup\\LogIn.cshtml",
@@ -313,25 +300,11 @@
               "RelativeToolTip": "MotionGlow.PL\\Views\\LoginSignup\\LogIn.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-30T12:46:31.606Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T12:46:31.606Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "SensorActivityLogService.cs",
-              "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\Services\\SensorActivityLogService.cs",
-              "RelativeDocumentMoniker": "MotionGlow.BLL\\Services\\SensorActivityLogService.cs",
-              "ToolTip": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\Services\\SensorActivityLogService.cs",
-              "RelativeToolTip": "MotionGlow.BLL\\Services\\SensorActivityLogService.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAIBJwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T18:10:09.498Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "PIRSensorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\Models\\PIRSensorViewModel.cs",
               "RelativeDocumentMoniker": "MotionGlow.PL\\Models\\PIRSensorViewModel.cs",
@@ -339,12 +312,11 @@
               "RelativeToolTip": "MotionGlow.PL\\Models\\PIRSensorViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T15:32:26.724Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T15:32:26.724Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "SignUpViewModel.cs",
               "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\Models\\SignUpViewModel.cs",
               "RelativeDocumentMoniker": "MotionGlow.PL\\Models\\SignUpViewModel.cs",
@@ -352,12 +324,11 @@
               "RelativeToolTip": "MotionGlow.PL\\Models\\SignUpViewModel.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAwwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T15:32:29.64Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T15:32:29.64Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "MotionGlow.PL\\Views\\_ViewStart.cshtml",
@@ -365,12 +336,11 @@
               "RelativeToolTip": "MotionGlow.PL\\Views\\_ViewStart.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-28T15:32:35.094Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T15:32:35.094Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\appsettings.json",
               "RelativeDocumentMoniker": "MotionGlow.PL\\appsettings.json",
@@ -378,12 +348,11 @@
               "RelativeToolTip": "MotionGlow.PL\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-28T15:44:28.998Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T15:44:28.998Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "MotionGlow.PL\\Views\\Shared\\_Layout.cshtml",
@@ -391,21 +360,7 @@
               "RelativeToolTip": "MotionGlow.PL\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AQIAACQAAAAAAAAAAIBJwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-28T15:32:42.001Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ESP32_DeviceService.cs",
-              "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\Services\\ESP32_DeviceService.cs",
-              "RelativeDocumentMoniker": "MotionGlow.BLL\\Services\\ESP32_DeviceService.cs",
-              "ToolTip": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\Services\\ESP32_DeviceService.cs",
-              "RelativeToolTip": "MotionGlow.BLL\\Services\\ESP32_DeviceService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAIBZwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T21:58:40.848Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T15:32:42.001Z"
             },
             {
               "$type": "Document",
@@ -417,12 +372,11 @@
               "RelativeToolTip": "MotionGlow.PL\\Controllers\\SensorController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T21:29:59.251Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T21:29:59.251Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "IPIRSensorService.cs",
               "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\IServices interfaces\\IPIRSensorService.cs",
               "RelativeDocumentMoniker": "MotionGlow.BLL\\IServices interfaces\\IPIRSensorService.cs",
@@ -430,8 +384,7 @@
               "RelativeToolTip": "MotionGlow.BLL\\IServices interfaces\\IPIRSensorService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T21:17:01.032Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T21:17:01.032Z"
             },
             {
               "$type": "Document",
@@ -443,8 +396,7 @@
               "RelativeToolTip": "MotionGlow.DAL\\Models\\SoundSensor.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAIBZwAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T21:35:25.072Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T21:35:25.072Z"
             },
             {
               "$type": "Document",
@@ -456,8 +408,7 @@
               "RelativeToolTip": "MotionGlow.DAL\\Models\\ESP32_Device.cs",
               "ViewState": "AQIAABMAAAAAAAAAAAAAwCgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T21:35:28.527Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T21:35:28.527Z"
             },
             {
               "$type": "Document",
@@ -469,7 +420,53 @@
               "RelativeToolTip": "MotionGlow.PL\\Controllers\\HomeController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAIBJwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T21:18:12.928Z",
+              "WhenOpened": "2024-06-27T21:18:12.928Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "b209b3e1-c67e-4a03-b438-4d528016ab3d",
+        "Display": 1,
+        "X": 508,
+        "Y": 290,
+        "Width": 1295,
+        "Height": 810,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MQTTService.cs",
+              "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\Services\\MQTTService.cs",
+              "RelativeDocumentMoniker": "MotionGlow.BLL\\Services\\MQTTService.cs",
+              "ToolTip": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.BLL\\Services\\MQTTService.cs",
+              "RelativeToolTip": "MotionGlow.BLL\\Services\\MQTTService.cs",
+              "ViewState": "AQIAAHsAAAAAAAAAAAAuwJEAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T13:56:55.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\Program.cs",
+              "RelativeDocumentMoniker": "MotionGlow.PL\\Program.cs",
+              "ToolTip": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\Program.cs",
+              "RelativeToolTip": "MotionGlow.PL\\Program.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAmwFkAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T18:19:21.922Z",
               "EditorCaption": ""
             }
           ]

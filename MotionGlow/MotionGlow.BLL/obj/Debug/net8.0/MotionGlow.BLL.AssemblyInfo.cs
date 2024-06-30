@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MotionGlow.BLL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+040b546b4e6f6ee6be88c187c9e9ae44f30233c1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de9a5abebfa85b5ab48036cef13e4b8b5ad84645")]
 [assembly: System.Reflection.AssemblyProductAttribute("MotionGlow.BLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MotionGlow.BLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

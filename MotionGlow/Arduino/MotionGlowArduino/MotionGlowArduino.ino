@@ -97,7 +97,17 @@ void loop() {
   Serial.println(sound_level);
 
   // Publish sensor data if criteria is met
-  if (pir_value == 1 || sound_level > 300) {
+  if (pir_value == 1)
+  {
+    client.publish(pir_topic, String(pir_value).c_str());
+    client.publish(sound_topic, String(sound_level).c_str()); 
+    client.publish(client_id, "6");
+
+    // Wait 3 seconds before possibly trying to publish again
+    delay(3000);
+  }
+  else if (sound_level > 300) 
+  {
     client.publish(pir_topic, String(pir_value).c_str());
     client.publish(sound_topic, String(sound_level).c_str()); 
     client.publish(client_id, "6");
