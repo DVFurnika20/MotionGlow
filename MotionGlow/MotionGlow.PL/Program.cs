@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using MotionGlow.BLL.IServices;
 using MotionGlow.BLL.Services;
 using MotionGlow.DAL.Data;
@@ -26,6 +27,7 @@ namespace MotionGlow
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+
         }
 
         public IConfiguration Configuration { get; }
@@ -54,6 +56,9 @@ namespace MotionGlow
             services.AddScoped<IPIRSensorService, PIRSensorService>();
             services.AddScoped<ISensorActivityLogService, SensorActivityLogService>();
             services.AddScoped<ISoundSensorService, SoundSensorService>();
+            services.AddScoped<IMqttService, MqttService>();
+ 
+            services.AddHostedService<MqttBackgroundService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

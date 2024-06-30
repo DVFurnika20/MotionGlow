@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Famouscave\\RiderProjects\\arduino-projects-11A\\MotionGlow\\MotionGlow.DAL\\MotionGlow.DAL.csproj": {}
+    "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.DAL\\MotionGlow.DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Famouscave\\RiderProjects\\arduino-projects-11A\\MotionGlow\\MotionGlow.DAL\\MotionGlow.DAL.csproj": {
+    "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.DAL\\MotionGlow.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Famouscave\\RiderProjects\\arduino-projects-11A\\MotionGlow\\MotionGlow.DAL\\MotionGlow.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.DAL\\MotionGlow.DAL.csproj",
         "projectName": "MotionGlow.DAL",
-        "projectPath": "C:\\Users\\Famouscave\\RiderProjects\\arduino-projects-11A\\MotionGlow\\MotionGlow.DAL\\MotionGlow.DAL.csproj",
-        "packagesPath": "C:\\Users\\Famouscave\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Famouscave\\RiderProjects\\arduino-projects-11A\\MotionGlow\\MotionGlow.DAL\\obj\\",
+        "projectPath": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.DAL\\MotionGlow.DAL.csproj",
+        "packagesPath": "C:\\Users\\kaloy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kaloy\\source\\repos\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.DAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Famouscave\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\kaloy\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,6 +35,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -77,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
