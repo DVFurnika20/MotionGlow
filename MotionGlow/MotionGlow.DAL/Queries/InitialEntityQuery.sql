@@ -19,7 +19,7 @@ CREATE TABLE SoundSensor (
     FOREIGN KEY (DeviceID) REFERENCES ESP32_Device(DeviceID)
 );
 
-INSERT INTO SoundSensor (DeviceID) VALUES (0)
+INSERT INTO SoundSensor (DeviceID) VALUES (-1)
 
 -- Create the PIRSensor table
 CREATE TABLE PIRSensor (
@@ -28,7 +28,7 @@ CREATE TABLE PIRSensor (
     FOREIGN KEY (DeviceID) REFERENCES ESP32_Device(DeviceID)
 );
 
-INSERT INTO PIRSensor (DeviceID) VALUES (0)
+INSERT INTO PIRSensor (DeviceID) VALUES (-1)
 
 -- Create the SensorActivityLog table
 CREATE TABLE SensorActivityLog (

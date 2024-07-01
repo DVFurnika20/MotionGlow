@@ -7,9 +7,9 @@ const char* mqtt_server = "6bd41be0555a4776852edeaf2e397702.s1.eu.hivemq.cloud";
 const int mqtt_port = 8883;
 const char* mqtt_user = "MQTTServerESP";
 const char* mqtt_password = "ArduinoProject1";
-#define CLIENT_ID "6"
-#define WiFiName "baguest"
-#define WiFiPassword "dadadadada"
+#define CLIENT_ID "5"
+#define WiFiName "S23Ultra"
+#define WiFiPassword "0893775450"
 
 // MQTT topic names
 const char* pir_topic = CLIENT_ID "/pir_sensor";

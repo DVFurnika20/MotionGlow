@@ -62,8 +62,11 @@ ViewData["Title"] = "Home Page";
         });
 
         var logsPerDayOfWeek = @Html.Raw(Json.Serialize(ViewData["LogsPerDayOfWeek"]));
-        var labels = Object.keys(logsPerDayOfWeek);
-        var data = Object.values(logsPerDayOfWeek);
+        var allDaysOfWeek = { 'Sunday': 0, 'Monday': 0, 'Tuesday': 0, 'Wednesday': 0, 'Thursday': 0, 'Friday': 0, 'Saturday': 0 };
+        var mergedLogs = { ...allDaysOfWeek, ...logsPerDayOfWeek };
+
+        var labels = Object.keys(mergedLogs);
+        var data = Object.values(mergedLogs);
         var backgroundColorsBar = labels.map(() => '#' + Math.floor(Math.random()*16777215).toString(16));
 
         var ctxBar = document.getElementById('myBarChart').getContext('2d');

@@ -132,7 +132,7 @@ namespace MotionGlow.BLL.Services
                         var pirSensor = new PIRSensor
                         {
                             DeviceID = espDevice.DeviceID,
-                            SensorID = 1
+                            SensorID = 0
                         };
 
                         // Add the new PIRSensor entity to the database
@@ -144,7 +144,7 @@ namespace MotionGlow.BLL.Services
 
                             DeviceID = espDevice.DeviceID,
                             PIRSensorID = pirSensor.SensorID,
-                            SoundSensorID = 1,
+                            SoundSensorID = 0,
                             Timestamp = sensorData.Timestamp,
                             SoundLevel = 120,
                             Distance = 20
@@ -160,7 +160,7 @@ namespace MotionGlow.BLL.Services
                         var soundSensor = new SoundSensor
                         {
                             DeviceID = espDevice.DeviceID,
-                            SensorID = 1
+                            SensorID = 0
                         };
 
                         // Add the new SoundSensor entity to the database
@@ -170,7 +170,7 @@ namespace MotionGlow.BLL.Services
                         var sensorActivityLog = new SensorActivityLog
                         {
                             DeviceID = espDevice.DeviceID,
-                            PIRSensorID = 1,
+                            PIRSensorID = 0,
                             SoundSensorID = soundSensor.SensorID,
                             Timestamp = sensorData.Timestamp,
                             SoundLevel = sensorData.SoundSensorLevel,

@@ -563,3 +563,4 @@ C:\Users\kaloy\source\repos\arduino-projects-11a-KBLambov20\MotionGlow\MotionGlo
 C:\Users\kaloy\source\repos\arduino-projects-11a-KBLambov20\MotionGlow\MotionGlow.PL\obj\Debug\net8.0\MotionGlow.PL.genruntimeconfig.cache
 C:\Users\kaloy\source\repos\arduino-projects-11a-KBLambov20\MotionGlow\MotionGlow.PL\obj\Debug\net8.0\ref\MotionGlow.PL.dll
 C:\Users\kaloy\source\repos\arduino-projects-11a-KBLambov20\MotionGlow\MotionGlow.PL\bin\Debug\net8.0\MQTTnet.dll
+C:\Users\Famouscave\RiderProjects\arduino-projects-11a-KBLambov20\MotionGlow\MotionGlow.PL\bin\Debug\net8.0\MQTTnet.dll
