@@ -23,6 +23,9 @@ a[b-46qga7szi0] {
   border-color: #1861ac;
 }
 
+.border-top[b-46qga7szi0] {
+  border-top: 50px solid #222222;
+}
 .border-bottom[b-46qga7szi0] {
   border-bottom: 1px solid #e5e5e5;
 }

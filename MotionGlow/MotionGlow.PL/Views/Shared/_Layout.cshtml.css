@@ -24,7 +24,7 @@ a {
 }
 
 .border-top {
-  border-top: 50px solid #222222;
+  border-top: 1px solid #e5e5e5;
 }
 .border-bottom {
   border-bottom: 1px solid #e5e5e5;
@@ -40,7 +40,7 @@ button.accept-policy {
 }
 
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
