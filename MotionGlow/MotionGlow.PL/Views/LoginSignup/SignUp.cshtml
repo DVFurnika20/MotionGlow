@@ -1,36 +1,102 @@
-﻿<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>@ViewData["Title"] - Sign Up</title>
-    <link rel="stylesheet" href="~/css/buttons.css" />
+﻿@using System.Security.Claims
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MotionGlow</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link id="mainStylesheet" rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MotionGlow.PL.styles.css" asp-append-version="true" />
+    @RenderSection("AdditionalStyles", required: false)
 </head>
-
-<div class="container h-100">
-    <div class="row h-100 justify-content-center align-items-center">
-        <h2>Don't have an account yet?<br><br></h2>
-        <form method="post" class="col-lg-6">
-            <h3>Register here:</h3>
-            <div class="form-group">
-                <label for="FirstName">First Name</label>
-                <input type="text" class="form-control" id="FirstName" name="FirstName" required>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MotionGlow</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        @if (Context.User.Identity.IsAuthenticated && Context.User.Claims.Any(c => c.Type == ClaimTypes.Role && c.Value == "Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Details" asp-action="ESP32_DeviceDetails">ESP32 Device Details</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Details" asp-action="SensorActivityLogDetails">Sensor Activity Log Details</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <span class="nav-link">Log in as an admin to view details</span>
+                            </li>
+                        }
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        @if (Context.User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <form asp-controller="Account" asp-action="SignOut" method="post">
+                                    <button type="submit" class="btn btn-link nav-link">Sign Out</button>
+                                </form>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Account" asp-action="SignUp">Sign Up</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="LastName">Last Name</label>
-                <input type="text" class="form-control" id="LastName" name="LastName" required>
-            </div>
-            <div class="form-group">
-                <label for="Email">Email</label>
-                <input type="email" class="form-control" id="Email" name="Email" required>
-            </div>
-            <div class="form-group">
-                <label for="Password">Password</label>
-                <input type="password" class="form-control" id="Password" name="Password" required>
-            </div>
-            <div class="form-group">
-                <label for="RepeatPassword">Repeat Password</label>
-                <input type="password" class="form-control" id="RepeatPassword" name="RepeatPassword" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Sign Up</button>
-        </form>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="main-content pb-3">
+            @RenderBody()
+        </main>
     </div>
-</div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container d-flex justify-content-between align-items-center">
+            &copy; 2024 - MotionGlow
+            <button id="darkModeToggle" class="btn btn-secondary ml-auto">Dark</button>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    @RenderSection("AdditionalScripts", required: false)
+    <script>
+        $(document).ready(function () {
+            const setTheme = (theme) => {
+                const stylesheetPath = theme === 'dark' ? '@Url.Content("~/css/dark-mode.css")' : '@Url.Content("~/css/site.css")';
+                $('#mainStylesheet').attr('href', stylesheetPath);
+                $('body').toggleClass('dark-mode', theme === 'dark');
+                $('#darkModeToggle').text(theme === 'dark' ? 'Light' : 'Dark');
+                localStorage.setItem('theme', theme);
+            };
+
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            setTheme(savedTheme);
+
+            $('#darkModeToggle').click(function () {
+                const newTheme = $('body').hasClass('dark-mode') ? 'light' : 'dark';
+                setTheme(newTheme);
+            });
+        });
+    </script>
+</body>
+</html>
