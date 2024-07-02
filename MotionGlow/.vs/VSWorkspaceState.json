@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\MotionGlow.BLL",
+    "\\MotionGlow.BLL\\Services",
+    "\\MotionGlow.DAL",
+    "\\MotionGlow.DAL\\Data",
+    "\\MotionGlow.DAL\\Models",
+    "\\MotionGlow.PL",
+    "\\MotionGlow.PL\\Models"
+  ],
+  "SelectedNode": "\\MotionGlow.sln",
+  "PreviewInSolutionExplorer": false
+}

@@ -8,8 +8,8 @@ const int mqtt_port = 8883;
 const char* mqtt_user = "MQTTServerESP";
 const char* mqtt_password = "ArduinoProject1";
 #define CLIENT_ID "5"
-#define WiFiName "S23Ultra"
-#define WiFiPassword "0893775450"
+#define WiFiName "your_wifi_name"
+#define WiFiPassword "your_wifi_password"
 
 // MQTT topic names
 const char* pir_topic = CLIENT_ID "/pir_sensor";
