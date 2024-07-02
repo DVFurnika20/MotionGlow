@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{E007E1CD-A44E-4911-89E4-58B8C79DC3B8}|MotionGlow.PL\\MotionGlow.PL.csproj|solutionrelative:motionglow.pl\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E007E1CD-A44E-4911-89E4-58B8C79DC3B8}|MotionGlow.PL\\MotionGlow.PL.csproj|c:\\users\\kaloy\\source\\repos\\wait\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.pl\\views\\loginsignup\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E007E1CD-A44E-4911-89E4-58B8C79DC3B8}|MotionGlow.PL\\MotionGlow.PL.csproj|solutionrelative:motionglow.pl\\views\\loginsignup\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E007E1CD-A44E-4911-89E4-58B8C79DC3B8}|MotionGlow.PL\\MotionGlow.PL.csproj|c:\\users\\kaloy\\source\\repos\\wait\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.pl\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E007E1CD-A44E-4911-89E4-58B8C79DC3B8}|MotionGlow.PL\\MotionGlow.PL.csproj|solutionrelative:motionglow.pl\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E007E1CD-A44E-4911-89E4-58B8C79DC3B8}|MotionGlow.PL\\MotionGlow.PL.csproj|c:\\users\\kaloy\\source\\repos\\wait\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.pl\\wwwroot\\css\\dark-mode.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{E007E1CD-A44E-4911-89E4-58B8C79DC3B8}|MotionGlow.PL\\MotionGlow.PL.csproj|solutionrelative:motionglow.pl\\wwwroot\\css\\dark-mode.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E007E1CD-A44E-4911-89E4-58B8C79DC3B8}|MotionGlow.PL\\MotionGlow.PL.csproj|c:\\users\\kaloy\\source\\repos\\wait\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.pl\\views\\loginsignup\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E007E1CD-A44E-4911-89E4-58B8C79DC3B8}|MotionGlow.PL\\MotionGlow.PL.csproj|solutionrelative:motionglow.pl\\views\\loginsignup\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E007E1CD-A44E-4911-89E4-58B8C79DC3B8}|MotionGlow.PL\\MotionGlow.PL.csproj|c:\\users\\kaloy\\source\\repos\\wait\\arduino-projects-11a-kblambov20\\motionglow\\motionglow.pl\\views\\loginsignup\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -46,7 +46,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\wait\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "MotionGlow.PL\\Views\\Shared\\_Layout.cshtml",
@@ -54,8 +54,7 @@
               "RelativeToolTip": "MotionGlow.PL\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AQIAAEwAAAAAAAAAAAAUwF4AAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-02T15:58:12.714Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-02T15:58:12.714Z"
             },
             {
               "$type": "Document",
@@ -65,14 +64,14 @@
               "RelativeDocumentMoniker": "MotionGlow.PL\\appsettings.json",
               "ToolTip": "C:\\Users\\kaloy\\source\\repos\\wait\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\appsettings.json",
               "RelativeToolTip": "MotionGlow.PL\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-07-02T15:57:31.88Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\wait\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "MotionGlow.PL\\wwwroot\\css\\site.css",
@@ -80,12 +79,11 @@
               "RelativeToolTip": "MotionGlow.PL\\wwwroot\\css\\site.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-07-02T15:57:14.217Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-02T15:57:14.217Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "dark-mode.css",
               "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\wait\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\wwwroot\\css\\dark-mode.css",
               "RelativeDocumentMoniker": "MotionGlow.PL\\wwwroot\\css\\dark-mode.css",
@@ -93,18 +91,17 @@
               "RelativeToolTip": "MotionGlow.PL\\wwwroot\\css\\dark-mode.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-07-02T15:57:06.863Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-02T15:57:06.863Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "SignUp.cshtml",
               "DocumentMoniker": "C:\\Users\\kaloy\\source\\repos\\wait\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\Views\\LoginSignup\\SignUp.cshtml",
               "RelativeDocumentMoniker": "MotionGlow.PL\\Views\\LoginSignup\\SignUp.cshtml",
               "ToolTip": "C:\\Users\\kaloy\\source\\repos\\wait\\arduino-projects-11a-KBLambov20\\MotionGlow\\MotionGlow.PL\\Views\\LoginSignup\\SignUp.cshtml",
               "RelativeToolTip": "MotionGlow.PL\\Views\\LoginSignup\\SignUp.cshtml",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAYwGYAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-02T15:56:47.745Z",
               "EditorCaption": ""
@@ -119,8 +116,7 @@
               "RelativeToolTip": "MotionGlow.PL\\Views\\LoginSignup\\LogIn.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-02T15:56:34.888Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-02T15:56:34.888Z"
             },
             {
               "$type": "Document",
@@ -132,8 +128,7 @@
               "RelativeToolTip": "MotionGlow.DAL\\Models\\SoundSensor.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T21:35:25.072Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T21:35:25.072Z"
             }
           ]
         }
