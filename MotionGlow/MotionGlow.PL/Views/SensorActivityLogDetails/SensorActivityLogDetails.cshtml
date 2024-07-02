@@ -1,23 +1,62 @@
 ﻿@model List<MotionGlow.Models.SensorActivityLogViewModel>
 
-@foreach (var activityLog in Model)
+@using (Html.BeginForm("SensorActivityLogDetails", "Details", FormMethod.Get, new { @class = "form-inline", @style = "margin-top: 20px;" }))
 {
-    <h2>Activity Log Details</h2>
+    <div class="row">
+        <div class="col">
+            <label for="dateFilter">Date:</label>
+            <select id="dateFilter" name="dateFilter" style="width: 150px; height: 30px;">
+                <option value="MostRecent" selected="@(ViewBag.DateFilter == "MostRecent")">Most Recent</option>
+                <option value="Oldest" selected="@(ViewBag.DateFilter == "Oldest")">Oldest</option>
+            </select>
+        </div>
 
-    <p>Timestamp: @activityLog.Timestamp</p>
-    <p>Sound Level: @activityLog.SoundLevel</p>
-    <p>Distance: @activityLog.Distance</p>
+        <div class="col">
+            <label for="soundLevelFilter">Sound Level:</label>
+            <select id="soundLevelFilter" name="soundLevelFilter" style="width: 150px; height: 30px;">
+                <option value="None" selected="@(ViewBag.SoundLevelFilter == "None")">None</option>
+                <option value="Highest" selected="@(ViewBag.SoundLevelFilter == "Highest")">Highest</option>
+                <option value="Lowest" selected="@(ViewBag.SoundLevelFilter == "Lowest")">Lowest</option>
+            </select>
+        </div>
 
-    <h3>Device Details</h3>
-    @if (activityLog.Device != null)
-    {
-        <p>Device Name: @activityLog.Device.DeviceName</p>
-        <p>Device Type: @activityLog.Device.DeviceType</p>
-        <p>Location: @activityLog.Device.Location</p>
-        <p>Description: @activityLog.Device.Description</p>
-    }
-    else
-    {
-        <p>No device information available for this activity log.</p>
-    }
+        <div class="col">
+            <label for="distanceFilter">Distance:</label>
+            <select id="distanceFilter" name="distanceFilter" style="width: 150px; height: 30px;">
+                <option value="None" selected="@(ViewBag.DistanceFilter == "None")">None</option>
+                <option value="Farthest" selected="@(ViewBag.DistanceFilter == "Farthest")">Farthest</option>
+                <option value="Closest" selected="@(ViewBag.DistanceFilter == "Closest")">Closest</option>
+            </select>
+        </div>
+
+        <div class="col">
+            <input type="submit" value="Filter" style="width: 100px; background-color: #4CAF50; color: white; border: none; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;  cursor: pointer;" />
+        </div>
+    </div>
 }
+
+<div class="row mt-3">
+    @foreach (var activityLog in Model)
+    {
+        <div class="card">
+            <h2>Activity Log Details</h2>
+
+            <p>Timestamp: @activityLog.Timestamp</p>
+            <p>Sound Level: @activityLog.SoundLevel</p>
+            <p>Distance: @activityLog.Distance</p>
+
+            <h3>Device Details</h3>
+            @if (activityLog.Device != null)
+            {
+                <p>Device Name: @activityLog.Device.DeviceName</p>
+                <p>Device Type: @activityLog.Device.DeviceType</p>
+                <p>Location: @activityLog.Device.Location</p>
+                <p>Description: @activityLog.Device.Description</p>
+            }
+            else
+            {
+                <p>No device information available for this activity log.</p>
+            }
+        </div>
+    }
+</div>

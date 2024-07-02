@@ -22,3 +22,20 @@ body {
 .navbar-brand, .nav-link {
     color: #e0e0e0 !important;
 }
+
+.card {
+    border: 1px solid #444444; 
+    background-color: #333333;
+    color: #e0e0e0;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(255,255,255,0.2);
+    transition: 0.3s;
+    width: 30%;
+    float: left;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(255,255,255,0.2);
+}
+

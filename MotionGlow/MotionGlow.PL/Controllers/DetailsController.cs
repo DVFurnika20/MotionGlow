@@ -34,9 +34,52 @@ namespace MotionGlow.Controllers
             return View("~/Views/ESP32_DeviceDetails/ESP32_DeviceDetails.cshtml", viewModels);
         }
 
-        public async Task<IActionResult> SensorActivityLogDetails()
+        public async Task<IActionResult> SensorActivityLogDetails(string dateFilter, string soundLevelFilter, string distanceFilter)
         {
             var activityLogs = await _activityLogService.GetAllSensorActivityLogsAsync();
+
+            // Order by date descending by default
+            activityLogs = activityLogs.OrderByDescending(log => log.Timestamp);
+            
+            // Apply filters here
+            if (dateFilter == "MostRecent")
+            {
+                // No action needed, already ordered by date descending
+            }
+            else if (dateFilter == "Oldest")
+            {
+                activityLogs = activityLogs.OrderBy(log => log.Timestamp);
+            }
+
+            if (soundLevelFilter == "Highest")
+            {
+                activityLogs = activityLogs.OrderByDescending(log => log.SoundLevel);
+            }
+            else if (soundLevelFilter == "Lowest")
+            {
+                activityLogs = activityLogs.OrderBy(log => log.SoundLevel);
+            }
+            else if (soundLevelFilter == "None")
+            {
+                // No action needed, no filter applied
+            }
+
+            if (distanceFilter == "Farthest")
+            {
+                activityLogs = activityLogs.OrderByDescending(log => log.Distance);
+            }
+            else if (distanceFilter == "Closest")
+            {
+                activityLogs = activityLogs.OrderBy(log => log.Distance);
+            }
+            else if (distanceFilter == "None")
+            {
+                // No action needed, no filter applied
+            }
+
+            ViewBag.DateFilter = dateFilter;
+            ViewBag.SoundLevelFilter = soundLevelFilter;
+            ViewBag.DistanceFilter = distanceFilter;
 
             var viewModels = new List<SensorActivityLogViewModel>();
 
